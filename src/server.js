@@ -1,11 +1,15 @@
 const express = require("express");
-const puppeteer = require("puppeteer");
+// const puppeteer = require("puppeteer");
 const fs = require("fs");
 const path = require("path");
+const puppeteer = require("puppeteer-extra");
+const StealthPlugin = require("puppeteer-extra-plugin-stealth");
+puppeteer.use(StealthPlugin());
 
 const app = express();
 const PORT = process.env.PORT || 8081;
-const limitComment = 50;
+const limitComment = 59;
+const starArr = [1, 2, 3, 4, 5];
 
 const processText = (text) => {
   if (!text) return null;
@@ -43,66 +47,64 @@ const extractIds = (url) => {
 };
 
 const urlProduct =
-  "https://shopee.vn/V%C3%B2ng-tay-Cuff-MAYEBE-LAVEND-th%C3%A9p-titan-thi%E1%BA%BFt-k%E1%BA%BF-%C4%91%C6%A1n-gi%E1%BA%A3n-thanh-l%E1%BB%8Bch-th%E1%BB%9Di-trang-d%C3%A0nh-cho-nam-v%C3%A0-n%E1%BB%AF-i.130184653.19367776308?sp_atk=231ed952-1c37-4312-898b-ca78397a31fa&xptdk=231ed952-1c37-4312-898b-ca78397a31fa";
+  "https://shopee.vn/Qu%E1%BA%A7n-%C3%A1o-th%E1%BB%83-thao-nam-n%E1%BB%AF-form-r%E1%BB%99ng-H%C3%A0n-Qu%E1%BB%91c-B%E1%BB%99-%C4%91%E1%BB%93-thu-%C4%91%C3%B4ng-nam-n%E1%BB%AF-unisex-02-i.295296178.18935223793?sp_atk=5edb3f3c-438f-4b76-a3d4-634e6f7908bf&xptdk=5edb3f3c-438f-4b76-a3d4-634e6f7908bf";
 
 const paramsQuery = extractIds(urlProduct);
 
 const itemId = paramsQuery?.itemId;
 const shopId = paramsQuery?.shopId;
+console.log("itemId: ", itemId);
+console.log("shopId: ", shopId);
 
-const urlCrawl = `https://shopee.vn/api/v2/item/get_ratings?exclude_filter=1&filter=0&filter_size=0&flag=1&fold_filter=0&itemid=${itemId}&limit=${limitComment}&offset=0&relevant_reviews=false&request_source=2&shopid=${shopId}&tag_filter=&type=1&variation_filters=`;
+const urlCrawl = `https://shopee.vn/api/v2/item/get_ratings?exclude_filter=1&filter=0&filter_size=0&flag=1&fold_filter=0&itemid=${itemId}&limit=${limitComment}&offset=0&relevant_reviews=false&request_source=2&shopid=${shopId}&tag_filter=&type=0&variation_filters=`;
 
 app.get("/shopee-ratings", async (req, res) => {
   try {
-    const browser = await puppeteer.launch({ headless: true });
-    const page = await browser.newPage();
+    const fetchDataForStar = async (star) => {
+      const browser = await puppeteer.launch({ headless: true });
+      const page = await browser.newPage();
 
-    await page.goto(urlCrawl);
+      const url = `https://shopee.vn/api/v2/item/get_ratings?exclude_filter=1&filter=0&filter_size=0&flag=1&fold_filter=0&itemid=${itemId}&limit=${limitComment}&offset=0&relevant_reviews=false&request_source=2&shopid=${shopId}&tag_filter=&type=${star}&variation_filters=`;
 
-    //thẻ <pre>
-    await page.waitForSelector("pre");
-    const preContent = await page.$eval("pre", (el) => el.textContent);
+      await page.goto(url);
 
-    await browser.close();
+      // đợi thẻ <pre> xuất hiện
+      await page.waitForSelector("pre");
+      const preContent = await page.$eval("pre", (el) => el.textContent);
 
-    // res.json({ success: true, data: JSON.parse(preContent) });
-    const dataReceive = JSON.parse(preContent);
+      await browser.close();
 
-    // res.json(dataReceive);
+      return JSON.parse(preContent);
+    };
 
-    if (dataReceive?.data?.item_rating_summary?.rating_count[0] === 0)
-      return res.json({ message: "No bad comment at 1 star" });
+    const dataPerStar = await Promise.all(
+      starArr.map((star) => fetchDataForStar(star))
+    );
+    // res.json(dataPerStar);
 
-    const comments = dataReceive.data?.ratings.map((rating) => {
-      if (!!rating?.comment)
-        return {
-          customerComment: processText(rating?.comment),
-          shopComment: processText(
-            rating.ItemRatingReply ? rating.ItemRatingReply.comment : ""
-          ),
-        };
-      else return;
+    // xử lý và gộp dữ liệu
+    const allComments = dataPerStar.flatMap((dataReceive, index) => {
+      if (dataReceive?.data?.item_rating_summary?.rating_count[0] === 0) {
+        return []; // không có đánh giá ở mức sao này
+      }
+
+      return dataReceive.data?.ratings
+        .map((rating) => {
+          if (!!rating?.comment) {
+            return {
+              shouldBuy: starArr[index] >= 4 ? 1 : 0,
+              customerComment: processText(rating?.comment),
+              shopComment: processText(
+                rating.ItemRatingReply ? rating.ItemRatingReply.comment : ""
+              ),
+            };
+          }
+          return null;
+        })
+        .filter(Boolean); // lọc bỏ các giá trị null
     });
 
-    res.json(comments);
-
-    //download file json
-    // const filePath = path.join(__dirname, "comments.json");
-
-    // // Writing the comments data to comments.json
-    // fs.writeFileSync(filePath, JSON.stringify(comments, null, 2));
-
-    // // Set the appropriate headers to prompt download
-    // res.setHeader("Content-Disposition", "attachment; filename=comments.json");
-    // res.setHeader("Content-Type", "application/json");
-    // res.sendFile(filePath, (err) => {
-    //   if (err) {
-    //     res.status(500).send("Error downloading the file");
-    //   } else {
-    //     // delete the file after sending it to the user
-    //     fs.unlinkSync(filePath);
-    //   }
-    // });
+    res.json(allComments);
   } catch (error) {
     console.error("Error fetching data:", error);
     res.status(500).json({
@@ -113,85 +115,6 @@ app.get("/shopee-ratings", async (req, res) => {
   }
 });
 
-//ghi vào file csv
-// (async () => {
-//   try {
-//     const browser = await puppeteer.launch({ headless: true });
-//     const page = await browser.newPage();
-
-//     await page.goto(urlCrawl);
-
-//     // Lấy nội dung của thẻ <pre>
-//     await page.waitForSelector("pre");
-//     const preContent = await page.$eval("pre", (el) => el.textContent);
-
-//     await browser.close();
-
-//     // Parse dữ liệu JSON
-//     const dataReceive = JSON.parse(preContent);
-
-//     const comments = dataReceive.data?.ratings.map((rating) => {
-//       return {
-//         customerComment: processText(rating?.comment),
-//         shopComment: processText(
-//           rating.ItemRatingReply ? rating.ItemRatingReply.comment : null
-//         ),
-//       };
-//     });
-
-//     // Tạo nội dung CSV
-//     const newCSVRows = comments.map(convertToCSV).join("\n");
-
-//     const filePath = path.join(__dirname, "data.csv");
-
-//     if (fs.existsSync(filePath)) {
-//       // Nếu file đã tồn tại, thêm UTF-8 BOM nếu chưa có
-//       const bom = "\uFEFF";
-//       let fileContent = fs.readFileSync(filePath, "utf8");
-//       if (!fileContent.startsWith(bom)) {
-//         fileContent = bom + fileContent;
-//         fs.writeFileSync(filePath, fileContent, "utf8");
-//       }
-//       // Append dữ liệu vào cuối file
-//       fs.appendFileSync(filePath, `\n${newCSVRows}`, "utf8");
-//       console.log("Dữ liệu đã được thêm vào file CSV.");
-//     } else {
-//       // Nếu file chưa tồn tại, thêm BOM vào đầu file
-//       const header = "customerComment,shopComment\n";
-//       fs.writeFileSync(filePath, `\uFEFF${header}${newCSVRows}`, "utf8");
-//       console.log("File CSV mới đã được tạo.");
-//     }
-//   } catch (error) {
-//     console.error("Error fetching data:", error);
-//   }
-// })();
-
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-
-// type: 0 => all
-// "item_rating_summary": {
-//   "rating_total": 239,
-//   "rating_count": [
-//       3,
-//       0,
-//       3,
-//       15,
-//       218
-//   ],
-//   "rcount_with_context": 98,
-//   "rcount_with_image": 41,
-//   "rcount_with_media": 43,
-//   "rcount_local_review": 239,
-//   "rcount_repeat_purchase": 0,
-//   "rcount_overall_fit_small": 0,
-//   "rcount_overall_fit_fit": 39,
-//   "rcount_overall_fit_large": 6,
-//   "rcount_oversea_review": 0,
-//   "rcount_folded": 0,
-//   "show_size_fitting": true,
-//   "fit_small_percentage": 0,
-//   "fit_fit_percentage": 87,
-//   "fit_large_percentage": 13
-// },
