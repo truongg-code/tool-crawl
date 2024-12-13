@@ -1,6 +1,6 @@
 module.exports = {
   HOST: "localhost",
-  USER: "root",
-  PASSWORD: "",
-  DB: "web_shop",
+  USER: "truong",
+  PASSWORD: "nguyentruong",
+  DB: "chrome_extension_database",
 };
