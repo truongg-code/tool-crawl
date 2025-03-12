@@ -225,6 +225,17 @@ const submitDataForEvaluation = async (req, res) => {
         .filter(Boolean); // lọc bỏ các giá trị null
     });
 
+    console.log("allComments: ", allComments?.length);
+
+    if (
+      allComments?.length === 1 &&
+      Object.keys(allComments?.[0]).length === 0
+    ) {
+      return res.json({
+        result:
+          "Số lượng bình luận không đủ để phân tích một cách trực quan về sản phẩm",
+      });
+    }
     const fieldsCSV = [
       "customer_comment",
       "shop_comment",
