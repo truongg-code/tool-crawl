@@ -1,0 +1,2777 @@
+[
+  {
+    "stars": {
+      "1": { "count": 0, "percent": 0 },
+      "2": { "count": 0, "percent": 0 },
+      "3": { "count": 1, "percent": 1 },
+      "4": { "count": 13, "percent": 14 },
+      "5": { "count": 77, "percent": 85 }
+    },
+    "rating_average": 4.8,
+    "reviews_count": 91,
+    "review_photo": { "total": 27, "total_photo": 44 },
+    "data": [
+      {
+        "id": 19226006,
+        "title": "Cực kì hài lòng",
+        "content": "Mẫu mã đẹp, chắc chắn, êm chân, đúng size luôn",
+        "status": "approved",
+        "thank_count": 0,
+        "score": 55.55555556,
+        "new_score": 0.16392238,
+        "customer_id": 22086245,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 4218043,
+            "full_path": "https://salt.tikicdn.com/ts/review/fa/37/c7/a054a94b4c541e216ee3becb2fff8922.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4218044,
+            "full_path": "https://salt.tikicdn.com/ts/review/f7/9e/d4/cac1191c6b937c0153081e9a805caa98.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4218045,
+            "full_path": "https://salt.tikicdn.com/ts/review/a8/19/ca/b78a3db3cfc5d909b0534ab69c51630d.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4218046,
+            "full_path": "https://salt.tikicdn.com/ts/review/9d/f1/ce/2a7fa9e60fa9309b8837ea5ff640db87.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4218047,
+            "full_path": "https://salt.tikicdn.com/ts/review/6c/5a/51/a03fcfa935ed2af6c8b12fd728d62ecf.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1684926820,
+        "created_by": {
+          "id": 22086245,
+          "name": "Kiều Văn Trung",
+          "full_name": "Kiều Văn Trung",
+          "region": null,
+          "avatar_url": "//tiki.vn/assets/img/avatar.png",
+          "created_time": "2021-06-08 16:13:58",
+          "group_id": 8,
+          "purchased": true,
+          "purchased_at": 1684722961,
+          "contribute_info": {
+            "id": 22086245,
+            "name": "Kiều Văn Trung",
+            "avatar": "//tiki.vn/assets/img/avatar.png",
+            "summary": {
+              "joined_time": "Đã tham gia 4 năm",
+              "total_review": 10,
+              "total_thank": 12
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 39"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 39"],
+        "spid": 134773005,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2023-05-24 18:13:40",
+          "delivery_date": "2023-05-24 08:40:16",
+          "current_date": "2025-03-19 17:45:48",
+          "content": "Đã dùng 10 giờ",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 10 giờ."
+        },
+        "comments": [
+          {
+            "id": 2979251,
+            "review_id": 19226006,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "Thật vinh hạnh khi có được cơ duyên mua hàng từ bạn. Hy vọng đây sẽ là món hàng ý nghĩa! 6 năm bán đồ da thật, BỤI LEATHER sẽ luôn cố gắng hết mình mong giành được sự hài lòng từ bạn. Chúng tôi chỉ bán đồ DA THẬT và cố gắng tạo ra những sản phẩm hoàn thiện nhất, chất lượng tốt nhất, giá cả phải chăng nhất, và dịch vụ hoàn hảo nhất với sự đảm bảo và cầu thị từ tận đáy lòng của đội ngũ chúng tôi. BỤI LEATHER mong bạn sẽ quay lại lần nữa!",
+            "score": 0,
+            "create_at": 1684935389,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": { "agree": [], "disagree": [] },
+        "delivery_rating": [
+          { "question": "Thời gian giao hàng?", "option": "Giao đúng hẹn" },
+          { "question": "Thái độ của shipper?", "option": "Lịch sự" },
+          { "question": "Giờ giao hàng?", "option": "Có hẹn giờ trước" },
+          { "question": "Cách đóng gói sản phẩm?", "option": "Cẩn thận" }
+        ]
+      },
+      {
+        "id": 18573886,
+        "title": "Cực kì hài lòng",
+        "content": "Cận tết mà tiki giao hàng rất nhanh. Giày đẹp, so với mức giá săn sale chưa tới 500k thì quá ổn. Nếu bền sẽ quay lại mua tiêpd",
+        "status": "approved",
+        "thank_count": 1,
+        "score": 0.01118846,
+        "new_score": 0.1619933,
+        "customer_id": 8740331,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 4068339,
+            "full_path": "https://salt.tikicdn.com/ts/review/47/f2/62/d91fafcdeecead22f6a145ca3fbf7523.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4068340,
+            "full_path": "https://salt.tikicdn.com/ts/review/2f/b4/17/96ffbf2fd950fd0dbf147c0423c8bb15.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4068341,
+            "full_path": "https://salt.tikicdn.com/ts/review/ea/8c/76/cd156a7b055ff6c649cc359b5d6cb38b.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1672894709,
+        "created_by": {
+          "id": 8740331,
+          "name": "Phạm Thị Thuý Hằng",
+          "full_name": "Phạm Thị Thuý Hằng",
+          "region": null,
+          "avatar_url": "//tiki.vn/assets/img/avatar.png",
+          "created_time": "2018-11-03 10:49:08",
+          "group_id": 8,
+          "purchased": true,
+          "purchased_at": 1672647635,
+          "contribute_info": {
+            "id": 8740331,
+            "name": "Phạm Thị Thuý Hằng",
+            "avatar": "//tiki.vn/assets/img/avatar.png",
+            "summary": {
+              "joined_time": "Đã tham gia 7 năm",
+              "total_review": 16,
+              "total_thank": 2
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 40"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 40"],
+        "spid": 134773007,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2023-01-05 11:58:29",
+          "delivery_date": "2023-01-05 09:13:26",
+          "current_date": "2025-03-19 17:45:48",
+          "content": "Đã dùng 3 giờ",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 3 giờ."
+        },
+        "comments": [
+          {
+            "id": 2840441,
+            "review_id": 18573886,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "BỤI LEATHER OFFICIAL BỤI LEATHER OFFICIAL Thật vinh hạnh khi có được cơ duyên mua hàng từ bạn. Hy vọng đây sẽ là món hàng ý nghĩa! 6 năm bán đồ da thật, BỤI LEATHER sẽ luôn cố gắng hết mình mong giành được sự hài lòng từ bạn. Chúng tôi chỉ bán đồ DA THẬT và cố gắng tạo ra những sản phẩm hoàn thiện nhất, chất lượng tốt nhất, giá cả phải chăng nhất, và dịch vụ hoàn hảo nhất với sự đảm bảo và cầu thị từ tận đáy lòng của đội ngũ chúng tôi. BỤI LEATHER mong bạn sẽ quay lại lần nữa!",
+            "score": 0,
+            "create_at": 1672927782,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": { "agree": [], "disagree": [] },
+        "delivery_rating": []
+      },
+      {
+        "id": 19486811,
+        "title": "Cực kì hài lòng",
+        "content": "Giày vừa mua về, mới mang thì bị hở mũi giày. Vui lòng đổi lại hoặc có chính sách sửa chữa",
+        "status": "approved",
+        "thank_count": 0,
+        "score": 0.0084302,
+        "new_score": 0.16349662,
+        "customer_id": 1132625,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 4387117,
+            "full_path": "https://salt.tikicdn.com/ts/review/3e/ff/71/738b01aaffc7b8caca94dc8634b647fe.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4387118,
+            "full_path": "https://salt.tikicdn.com/ts/review/36/39/76/ec862228ef82a5b361b97c910a0c15c3.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4387119,
+            "full_path": "https://salt.tikicdn.com/ts/review/36/20/38/7f92f79c74599f1a5af539e21b65ba93.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1693011707,
+        "created_by": {
+          "id": 1132625,
+          "name": " Dung",
+          "full_name": " Dung",
+          "region": null,
+          "avatar_url": "//tiki.vn/assets/img/avatar.png",
+          "created_time": "2016-01-27 09:27:28",
+          "group_id": 8,
+          "purchased": true,
+          "purchased_at": 1729514333,
+          "contribute_info": {
+            "id": 1132625,
+            "name": " Dung",
+            "avatar": "//tiki.vn/assets/img/avatar.png",
+            "summary": {
+              "joined_time": "Đã tham gia 9 năm",
+              "total_review": 59,
+              "total_thank": 0
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 43"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 43"],
+        "spid": 134773013,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2023-08-26 08:01:47",
+          "delivery_date": "2023-07-05 15:41:24",
+          "current_date": "2025-03-19 17:45:48",
+          "content": "Đã dùng 2 tháng",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 2 tháng."
+        },
+        "comments": [
+          {
+            "id": 3037773,
+            "review_id": 19486811,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "Thật vinh hạnh khi có được cơ duyên mua hàng từ bạn. Hy vọng đây sẽ là món hàng ý nghĩa! 6 năm bán đồ da thật, BỤI LEATHER sẽ luôn cố gắng hết mình mong giành được sự hài lòng từ bạn. Chúng tôi chỉ bán đồ DA THẬT và cố gắng tạo ra những sản phẩm hoàn thiện nhất, chất lượng tốt nhất, giá cả phải chăng nhất, và dịch vụ hoàn hảo nhất với sự đảm bảo và cầu thị từ tận đáy lòng của đội ngũ chúng tôi. BỤI LEATHER mong bạn sẽ quay lại lần nữa!",
+            "score": 0,
+            "create_at": 1693109844,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": {
+          "agree": [
+            "Êm chân",
+            "Kiểu dáng đẹp",
+            "Màu sắc đẹp",
+            "Trọng lượng nhẹ"
+          ],
+          "disagree": []
+        },
+        "delivery_rating": []
+      },
+      {
+        "id": 13470527,
+        "title": "Cực kì hài lòng",
+        "content": "Giày đúng cỡ, vừa chân. Đóng hộp sản phẩm chuyên nghiệp, shop tặng đủ bộ phụ kiện bàn chải, si, khăn lau, thẻ bảo hành và cả thẻ giảm giá lần sau nữa chứ!",
+        "status": "approved",
+        "thank_count": 0,
+        "score": 44.44444444,
+        "new_score": 0.15774473,
+        "customer_id": 8902118,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 2812022,
+            "full_path": "https://salt.tikicdn.com/ts/review/92/18/b3/081dca47aec80b2968228c6f8d99c7f4.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 2812023,
+            "full_path": "https://salt.tikicdn.com/ts/review/df/8e/74/c1733e5bf6cfa5736280c1d6e3d29053.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 2812024,
+            "full_path": "https://salt.tikicdn.com/ts/review/37/85/cb/cc7666db524b2a523a833035f622ddfa.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1638001123,
+        "created_by": {
+          "id": 8902118,
+          "name": "Tung Tung",
+          "full_name": "Tung Tung",
+          "region": null,
+          "avatar_url": "https://salt.tikicdn.com/cache/512x512/ts/avatar/59/41/e5/c8937988b4596b1052296731040af3e0.png",
+          "created_time": "2018-11-11 16:38:15",
+          "purchased": true,
+          "purchased_at": 1637841626,
+          "contribute_info": {
+            "id": 8902118,
+            "name": "Tung Tung",
+            "avatar": "https://salt.tikicdn.com/cache/512x512/ts/avatar/59/41/e5/c8937988b4596b1052296731040af3e0.png",
+            "summary": {
+              "joined_time": "Đã tham gia 6 năm",
+              "total_review": 440,
+              "total_thank": 313
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 39"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 39"],
+        "spid": 134773005,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2021-11-27 15:18:43",
+          "delivery_date": "2021-11-27 14:31:06",
+          "current_date": "2025-03-19 17:45:48",
+          "content": "Đã dùng 1 giờ",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 1 giờ."
+        },
+        "comments": [
+          {
+            "id": 2205367,
+            "review_id": 13470527,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "Cảm ơn bạn đã tin yêu, ủng hộ shop và đánh giá 5 sao 😘😘😘. Hy vọng đây sẽ là một món hàng ý nghĩa! Với kinh nghiệm hơn 6 năm bán đồ đa thật, BỤI LEATHER sẽ luôn cố gắng hết mình để tạo ra những sản phẩm chất lượng nhất, giá phải chăng nhất và dịch vụ CSKH hoàn hảo nhất giúp KH có những trải nghiệm mua hàng tốt nhất. Hy vọng sẽ được phục vụ bạn ở trải nghiệm mua hàng tiếp theo 🥰🥰🥰",
+            "score": 0,
+            "create_at": 1648008070,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": { "agree": [], "disagree": [] },
+        "delivery_rating": []
+      },
+      {
+        "id": 17736417,
+        "title": "Cực kì hài lòng",
+        "content": "Form giày đẹp và sang, mang vào ôm chân nhưng vẫn thoải mái. Giá tốt. Chăm sóc KH tận tình, mình mua 1 đôi nhưng hơi rộng được hỗ trợ đổi trả nhanh chóng. Sau này mình sẽ mua thêm để tặng cho người thân. 10 điểm cho shop.",
+        "status": "approved",
+        "thank_count": 0,
+        "score": 0.94679186,
+        "new_score": 0.16207734,
+        "customer_id": 1932469,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 3888898,
+            "full_path": "https://salt.tikicdn.com/ts/review/4b/f8/56/90b454feb855dd78fd66389f7c848514.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1663565190,
+        "created_by": {
+          "id": 1932469,
+          "name": "Đoàn Thanh Phong",
+          "full_name": "Đoàn Thanh Phong",
+          "region": null,
+          "avatar_url": "https://salt.tikicdn.com/cache/512x512/ts/avatar/f2/5a/09/824c36fcf3aeb4b26825404ed051a171.png",
+          "created_time": "2016-11-29 20:12:21",
+          "group_id": 8,
+          "purchased": true,
+          "purchased_at": 1663200922,
+          "contribute_info": {
+            "id": 1932469,
+            "name": "Đoàn Thanh Phong",
+            "avatar": "https://salt.tikicdn.com/cache/512x512/ts/avatar/f2/5a/09/824c36fcf3aeb4b26825404ed051a171.png",
+            "summary": {
+              "joined_time": "Đã tham gia 8 năm",
+              "total_review": 48,
+              "total_thank": 0
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 42"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 42"],
+        "spid": 134773011,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2022-09-19 12:26:30",
+          "delivery_date": "2022-09-19 11:01:31",
+          "current_date": "2025-03-19 17:45:49",
+          "content": "Đã dùng 1 giờ",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 1 giờ."
+        },
+        "comments": [
+          {
+            "id": 2657421,
+            "review_id": 17736417,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "Thật vinh hạnh khi có được cơ duyên mua hàng từ bạn. Hy vọng đây sẽ là món hàng ý nghĩa! 6 năm bán đồ da thật, BỤI LEATHER sẽ luôn cố gắng hết mình mong giành được sự hài lòng từ bạn. Chúng tôi chỉ bán đồ DA THẬT và cố gắng tạo ra những sản phẩm hoàn thiện nhất, chất lượng tốt nhất, giá cả phải chăng nhất, và dịch vụ hoàn hảo nhất với sự đảm bảo và cầu thị từ tận đáy lòng của đội ngũ chúng tôi. BỤI LEATHER mong bạn sẽ quay lại lần nữa!",
+            "score": 0,
+            "create_at": 1663749359,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": { "agree": [], "disagree": [] },
+        "delivery_rating": []
+      }
+    ],
+    "paging": {
+      "total": 91,
+      "per_page": 5,
+      "current_page": 1,
+      "last_page": 19,
+      "from": 1,
+      "to": 5
+    },
+    "sort_options": [
+      [
+        { "label": "Hữu ích", "value": "score|desc" },
+        { "label": "Mới nhất", "value": "id|desc" },
+        { "label": "Có hình ảnh", "value": "has_image" }
+      ],
+      [
+        { "label": "Tất cả khách hàng", "value": "customer|all" },
+        { "label": "Khách đã mua hàng", "value": "bought" }
+      ],
+      [
+        { "label": "Tất cả sao", "value": "stars|all" },
+        { "label": "5 sao", "value": "stars|5" },
+        { "label": "4 sao", "value": "stars|4" },
+        { "label": "3 sao", "value": "stars|3" },
+        { "label": "2 sao", "value": "stars|2" },
+        { "label": "1 sao", "value": "stars|1" },
+        { "label": "Hài lòng", "value": "stars|4|5" },
+        { "label": "Chưa hài lòng", "value": "stars|1|2|3" }
+      ]
+    ],
+    "exclude_image": false,
+    "attribute_vote_summary": {
+      "product_id": 134773001,
+      "seller_id": 181498,
+      "number_of_vote_to_show": 20,
+      "votes": [
+        {
+          "attribute_id": "trong_luong_nhe",
+          "attribute_name": "Trọng lượng nhẹ",
+          "total_vote": 13,
+          "agree": 12,
+          "disagree": 0,
+          "no_idea": 1
+        },
+        {
+          "attribute_id": "chat_lieu_da_mem",
+          "attribute_name": "Chất liệu da mềm",
+          "total_vote": 4,
+          "agree": 4,
+          "disagree": 0,
+          "no_idea": 0
+        },
+        {
+          "attribute_id": "em_chan",
+          "attribute_name": "Êm chân",
+          "total_vote": 11,
+          "agree": 9,
+          "disagree": 0,
+          "no_idea": 2
+        },
+        {
+          "attribute_id": "mau_sac_dep",
+          "attribute_name": "Màu sắc đẹp",
+          "total_vote": 14,
+          "agree": 12,
+          "disagree": 0,
+          "no_idea": 2
+        }
+      ]
+    }
+  },
+  {
+    "stars": {
+      "1": { "count": 0, "percent": 0 },
+      "2": { "count": 0, "percent": 0 },
+      "3": { "count": 1, "percent": 1 },
+      "4": { "count": 13, "percent": 14 },
+      "5": { "count": 77, "percent": 85 }
+    },
+    "rating_average": 4.8,
+    "reviews_count": 91,
+    "review_photo": { "total": 27, "total_photo": 44 },
+    "data": [
+      {
+        "id": 19226006,
+        "title": "Cực kì hài lòng",
+        "content": "Mẫu mã đẹp, chắc chắn, êm chân, đúng size luôn",
+        "status": "approved",
+        "thank_count": 0,
+        "score": 55.55555556,
+        "new_score": 0.16392238,
+        "customer_id": 22086245,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 4218043,
+            "full_path": "https://salt.tikicdn.com/ts/review/fa/37/c7/a054a94b4c541e216ee3becb2fff8922.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4218044,
+            "full_path": "https://salt.tikicdn.com/ts/review/f7/9e/d4/cac1191c6b937c0153081e9a805caa98.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4218045,
+            "full_path": "https://salt.tikicdn.com/ts/review/a8/19/ca/b78a3db3cfc5d909b0534ab69c51630d.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4218046,
+            "full_path": "https://salt.tikicdn.com/ts/review/9d/f1/ce/2a7fa9e60fa9309b8837ea5ff640db87.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4218047,
+            "full_path": "https://salt.tikicdn.com/ts/review/6c/5a/51/a03fcfa935ed2af6c8b12fd728d62ecf.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1684926820,
+        "created_by": {
+          "id": 22086245,
+          "name": "Kiều Văn Trung",
+          "full_name": "Kiều Văn Trung",
+          "region": null,
+          "avatar_url": "//tiki.vn/assets/img/avatar.png",
+          "created_time": "2021-06-08 16:13:58",
+          "group_id": 8,
+          "purchased": true,
+          "purchased_at": 1684722961,
+          "contribute_info": {
+            "id": 22086245,
+            "name": "Kiều Văn Trung",
+            "avatar": "//tiki.vn/assets/img/avatar.png",
+            "summary": {
+              "joined_time": "Đã tham gia 4 năm",
+              "total_review": 10,
+              "total_thank": 12
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 39"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 39"],
+        "spid": 134773005,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2023-05-24 18:13:40",
+          "delivery_date": "2023-05-24 08:40:16",
+          "current_date": "2025-03-19 17:45:48",
+          "content": "Đã dùng 10 giờ",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 10 giờ."
+        },
+        "comments": [
+          {
+            "id": 2979251,
+            "review_id": 19226006,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "Thật vinh hạnh khi có được cơ duyên mua hàng từ bạn. Hy vọng đây sẽ là món hàng ý nghĩa! 6 năm bán đồ da thật, BỤI LEATHER sẽ luôn cố gắng hết mình mong giành được sự hài lòng từ bạn. Chúng tôi chỉ bán đồ DA THẬT và cố gắng tạo ra những sản phẩm hoàn thiện nhất, chất lượng tốt nhất, giá cả phải chăng nhất, và dịch vụ hoàn hảo nhất với sự đảm bảo và cầu thị từ tận đáy lòng của đội ngũ chúng tôi. BỤI LEATHER mong bạn sẽ quay lại lần nữa!",
+            "score": 0,
+            "create_at": 1684935389,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": { "agree": [], "disagree": [] },
+        "delivery_rating": [
+          { "question": "Thời gian giao hàng?", "option": "Giao đúng hẹn" },
+          { "question": "Thái độ của shipper?", "option": "Lịch sự" },
+          { "question": "Giờ giao hàng?", "option": "Có hẹn giờ trước" },
+          { "question": "Cách đóng gói sản phẩm?", "option": "Cẩn thận" }
+        ]
+      },
+      {
+        "id": 18573886,
+        "title": "Cực kì hài lòng",
+        "content": "Cận tết mà tiki giao hàng rất nhanh. Giày đẹp, so với mức giá săn sale chưa tới 500k thì quá ổn. Nếu bền sẽ quay lại mua tiêpd",
+        "status": "approved",
+        "thank_count": 1,
+        "score": 0.01118846,
+        "new_score": 0.1619933,
+        "customer_id": 8740331,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 4068339,
+            "full_path": "https://salt.tikicdn.com/ts/review/47/f2/62/d91fafcdeecead22f6a145ca3fbf7523.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4068340,
+            "full_path": "https://salt.tikicdn.com/ts/review/2f/b4/17/96ffbf2fd950fd0dbf147c0423c8bb15.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4068341,
+            "full_path": "https://salt.tikicdn.com/ts/review/ea/8c/76/cd156a7b055ff6c649cc359b5d6cb38b.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1672894709,
+        "created_by": {
+          "id": 8740331,
+          "name": "Phạm Thị Thuý Hằng",
+          "full_name": "Phạm Thị Thuý Hằng",
+          "region": null,
+          "avatar_url": "//tiki.vn/assets/img/avatar.png",
+          "created_time": "2018-11-03 10:49:08",
+          "group_id": 8,
+          "purchased": true,
+          "purchased_at": 1672647635,
+          "contribute_info": {
+            "id": 8740331,
+            "name": "Phạm Thị Thuý Hằng",
+            "avatar": "//tiki.vn/assets/img/avatar.png",
+            "summary": {
+              "joined_time": "Đã tham gia 7 năm",
+              "total_review": 16,
+              "total_thank": 2
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 40"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 40"],
+        "spid": 134773007,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2023-01-05 11:58:29",
+          "delivery_date": "2023-01-05 09:13:26",
+          "current_date": "2025-03-19 17:45:48",
+          "content": "Đã dùng 3 giờ",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 3 giờ."
+        },
+        "comments": [
+          {
+            "id": 2840441,
+            "review_id": 18573886,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "BỤI LEATHER OFFICIAL BỤI LEATHER OFFICIAL Thật vinh hạnh khi có được cơ duyên mua hàng từ bạn. Hy vọng đây sẽ là món hàng ý nghĩa! 6 năm bán đồ da thật, BỤI LEATHER sẽ luôn cố gắng hết mình mong giành được sự hài lòng từ bạn. Chúng tôi chỉ bán đồ DA THẬT và cố gắng tạo ra những sản phẩm hoàn thiện nhất, chất lượng tốt nhất, giá cả phải chăng nhất, và dịch vụ hoàn hảo nhất với sự đảm bảo và cầu thị từ tận đáy lòng của đội ngũ chúng tôi. BỤI LEATHER mong bạn sẽ quay lại lần nữa!",
+            "score": 0,
+            "create_at": 1672927782,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": { "agree": [], "disagree": [] },
+        "delivery_rating": []
+      },
+      {
+        "id": 19486811,
+        "title": "Cực kì hài lòng",
+        "content": "Giày vừa mua về, mới mang thì bị hở mũi giày. Vui lòng đổi lại hoặc có chính sách sửa chữa",
+        "status": "approved",
+        "thank_count": 0,
+        "score": 0.0084302,
+        "new_score": 0.16349662,
+        "customer_id": 1132625,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 4387117,
+            "full_path": "https://salt.tikicdn.com/ts/review/3e/ff/71/738b01aaffc7b8caca94dc8634b647fe.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4387118,
+            "full_path": "https://salt.tikicdn.com/ts/review/36/39/76/ec862228ef82a5b361b97c910a0c15c3.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4387119,
+            "full_path": "https://salt.tikicdn.com/ts/review/36/20/38/7f92f79c74599f1a5af539e21b65ba93.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1693011707,
+        "created_by": {
+          "id": 1132625,
+          "name": " Dung",
+          "full_name": " Dung",
+          "region": null,
+          "avatar_url": "//tiki.vn/assets/img/avatar.png",
+          "created_time": "2016-01-27 09:27:28",
+          "group_id": 8,
+          "purchased": true,
+          "purchased_at": 1729514333,
+          "contribute_info": {
+            "id": 1132625,
+            "name": " Dung",
+            "avatar": "//tiki.vn/assets/img/avatar.png",
+            "summary": {
+              "joined_time": "Đã tham gia 9 năm",
+              "total_review": 59,
+              "total_thank": 0
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 43"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 43"],
+        "spid": 134773013,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2023-08-26 08:01:47",
+          "delivery_date": "2023-07-05 15:41:24",
+          "current_date": "2025-03-19 17:45:48",
+          "content": "Đã dùng 2 tháng",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 2 tháng."
+        },
+        "comments": [
+          {
+            "id": 3037773,
+            "review_id": 19486811,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "Thật vinh hạnh khi có được cơ duyên mua hàng từ bạn. Hy vọng đây sẽ là món hàng ý nghĩa! 6 năm bán đồ da thật, BỤI LEATHER sẽ luôn cố gắng hết mình mong giành được sự hài lòng từ bạn. Chúng tôi chỉ bán đồ DA THẬT và cố gắng tạo ra những sản phẩm hoàn thiện nhất, chất lượng tốt nhất, giá cả phải chăng nhất, và dịch vụ hoàn hảo nhất với sự đảm bảo và cầu thị từ tận đáy lòng của đội ngũ chúng tôi. BỤI LEATHER mong bạn sẽ quay lại lần nữa!",
+            "score": 0,
+            "create_at": 1693109844,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": {
+          "agree": [
+            "Êm chân",
+            "Kiểu dáng đẹp",
+            "Màu sắc đẹp",
+            "Trọng lượng nhẹ"
+          ],
+          "disagree": []
+        },
+        "delivery_rating": []
+      },
+      {
+        "id": 13470527,
+        "title": "Cực kì hài lòng",
+        "content": "Giày đúng cỡ, vừa chân. Đóng hộp sản phẩm chuyên nghiệp, shop tặng đủ bộ phụ kiện bàn chải, si, khăn lau, thẻ bảo hành và cả thẻ giảm giá lần sau nữa chứ!",
+        "status": "approved",
+        "thank_count": 0,
+        "score": 44.44444444,
+        "new_score": 0.15774473,
+        "customer_id": 8902118,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 2812022,
+            "full_path": "https://salt.tikicdn.com/ts/review/92/18/b3/081dca47aec80b2968228c6f8d99c7f4.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 2812023,
+            "full_path": "https://salt.tikicdn.com/ts/review/df/8e/74/c1733e5bf6cfa5736280c1d6e3d29053.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 2812024,
+            "full_path": "https://salt.tikicdn.com/ts/review/37/85/cb/cc7666db524b2a523a833035f622ddfa.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1638001123,
+        "created_by": {
+          "id": 8902118,
+          "name": "Tung Tung",
+          "full_name": "Tung Tung",
+          "region": null,
+          "avatar_url": "https://salt.tikicdn.com/cache/512x512/ts/avatar/59/41/e5/c8937988b4596b1052296731040af3e0.png",
+          "created_time": "2018-11-11 16:38:15",
+          "purchased": true,
+          "purchased_at": 1637841626,
+          "contribute_info": {
+            "id": 8902118,
+            "name": "Tung Tung",
+            "avatar": "https://salt.tikicdn.com/cache/512x512/ts/avatar/59/41/e5/c8937988b4596b1052296731040af3e0.png",
+            "summary": {
+              "joined_time": "Đã tham gia 6 năm",
+              "total_review": 440,
+              "total_thank": 313
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 39"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 39"],
+        "spid": 134773005,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2021-11-27 15:18:43",
+          "delivery_date": "2021-11-27 14:31:06",
+          "current_date": "2025-03-19 17:45:48",
+          "content": "Đã dùng 1 giờ",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 1 giờ."
+        },
+        "comments": [
+          {
+            "id": 2205367,
+            "review_id": 13470527,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "Cảm ơn bạn đã tin yêu, ủng hộ shop và đánh giá 5 sao 😘😘😘. Hy vọng đây sẽ là một món hàng ý nghĩa! Với kinh nghiệm hơn 6 năm bán đồ đa thật, BỤI LEATHER sẽ luôn cố gắng hết mình để tạo ra những sản phẩm chất lượng nhất, giá phải chăng nhất và dịch vụ CSKH hoàn hảo nhất giúp KH có những trải nghiệm mua hàng tốt nhất. Hy vọng sẽ được phục vụ bạn ở trải nghiệm mua hàng tiếp theo 🥰🥰🥰",
+            "score": 0,
+            "create_at": 1648008070,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": { "agree": [], "disagree": [] },
+        "delivery_rating": []
+      },
+      {
+        "id": 17736417,
+        "title": "Cực kì hài lòng",
+        "content": "Form giày đẹp và sang, mang vào ôm chân nhưng vẫn thoải mái. Giá tốt. Chăm sóc KH tận tình, mình mua 1 đôi nhưng hơi rộng được hỗ trợ đổi trả nhanh chóng. Sau này mình sẽ mua thêm để tặng cho người thân. 10 điểm cho shop.",
+        "status": "approved",
+        "thank_count": 0,
+        "score": 0.94679186,
+        "new_score": 0.16207734,
+        "customer_id": 1932469,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 3888898,
+            "full_path": "https://salt.tikicdn.com/ts/review/4b/f8/56/90b454feb855dd78fd66389f7c848514.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1663565190,
+        "created_by": {
+          "id": 1932469,
+          "name": "Đoàn Thanh Phong",
+          "full_name": "Đoàn Thanh Phong",
+          "region": null,
+          "avatar_url": "https://salt.tikicdn.com/cache/512x512/ts/avatar/f2/5a/09/824c36fcf3aeb4b26825404ed051a171.png",
+          "created_time": "2016-11-29 20:12:21",
+          "group_id": 8,
+          "purchased": true,
+          "purchased_at": 1663200922,
+          "contribute_info": {
+            "id": 1932469,
+            "name": "Đoàn Thanh Phong",
+            "avatar": "https://salt.tikicdn.com/cache/512x512/ts/avatar/f2/5a/09/824c36fcf3aeb4b26825404ed051a171.png",
+            "summary": {
+              "joined_time": "Đã tham gia 8 năm",
+              "total_review": 48,
+              "total_thank": 0
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 42"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 42"],
+        "spid": 134773011,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2022-09-19 12:26:30",
+          "delivery_date": "2022-09-19 11:01:31",
+          "current_date": "2025-03-19 17:45:48",
+          "content": "Đã dùng 1 giờ",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 1 giờ."
+        },
+        "comments": [
+          {
+            "id": 2657421,
+            "review_id": 17736417,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "Thật vinh hạnh khi có được cơ duyên mua hàng từ bạn. Hy vọng đây sẽ là món hàng ý nghĩa! 6 năm bán đồ da thật, BỤI LEATHER sẽ luôn cố gắng hết mình mong giành được sự hài lòng từ bạn. Chúng tôi chỉ bán đồ DA THẬT và cố gắng tạo ra những sản phẩm hoàn thiện nhất, chất lượng tốt nhất, giá cả phải chăng nhất, và dịch vụ hoàn hảo nhất với sự đảm bảo và cầu thị từ tận đáy lòng của đội ngũ chúng tôi. BỤI LEATHER mong bạn sẽ quay lại lần nữa!",
+            "score": 0,
+            "create_at": 1663749359,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": { "agree": [], "disagree": [] },
+        "delivery_rating": []
+      }
+    ],
+    "paging": {
+      "total": 91,
+      "per_page": 5,
+      "current_page": 1,
+      "last_page": 19,
+      "from": 1,
+      "to": 5
+    },
+    "sort_options": [
+      [
+        { "label": "Hữu ích", "value": "score|desc" },
+        { "label": "Mới nhất", "value": "id|desc" },
+        { "label": "Có hình ảnh", "value": "has_image" }
+      ],
+      [
+        { "label": "Tất cả khách hàng", "value": "customer|all" },
+        { "label": "Khách đã mua hàng", "value": "bought" }
+      ],
+      [
+        { "label": "Tất cả sao", "value": "stars|all" },
+        { "label": "5 sao", "value": "stars|5" },
+        { "label": "4 sao", "value": "stars|4" },
+        { "label": "3 sao", "value": "stars|3" },
+        { "label": "2 sao", "value": "stars|2" },
+        { "label": "1 sao", "value": "stars|1" },
+        { "label": "Hài lòng", "value": "stars|4|5" },
+        { "label": "Chưa hài lòng", "value": "stars|1|2|3" }
+      ]
+    ],
+    "exclude_image": false,
+    "attribute_vote_summary": {
+      "product_id": 134773001,
+      "seller_id": 181498,
+      "number_of_vote_to_show": 20,
+      "votes": [
+        {
+          "attribute_id": "trong_luong_nhe",
+          "attribute_name": "Trọng lượng nhẹ",
+          "total_vote": 13,
+          "agree": 12,
+          "disagree": 0,
+          "no_idea": 1
+        },
+        {
+          "attribute_id": "chat_lieu_da_mem",
+          "attribute_name": "Chất liệu da mềm",
+          "total_vote": 4,
+          "agree": 4,
+          "disagree": 0,
+          "no_idea": 0
+        },
+        {
+          "attribute_id": "em_chan",
+          "attribute_name": "Êm chân",
+          "total_vote": 11,
+          "agree": 9,
+          "disagree": 0,
+          "no_idea": 2
+        },
+        {
+          "attribute_id": "mau_sac_dep",
+          "attribute_name": "Màu sắc đẹp",
+          "total_vote": 14,
+          "agree": 12,
+          "disagree": 0,
+          "no_idea": 2
+        }
+      ]
+    }
+  },
+  {
+    "stars": {
+      "1": { "count": 0, "percent": 0 },
+      "2": { "count": 0, "percent": 0 },
+      "3": { "count": 1, "percent": 1 },
+      "4": { "count": 13, "percent": 14 },
+      "5": { "count": 77, "percent": 85 }
+    },
+    "rating_average": 4.8,
+    "reviews_count": 91,
+    "review_photo": { "total": 27, "total_photo": 44 },
+    "data": [
+      {
+        "id": 19226006,
+        "title": "Cực kì hài lòng",
+        "content": "Mẫu mã đẹp, chắc chắn, êm chân, đúng size luôn",
+        "status": "approved",
+        "thank_count": 0,
+        "score": 55.55555556,
+        "new_score": 0.16392238,
+        "customer_id": 22086245,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 4218043,
+            "full_path": "https://salt.tikicdn.com/ts/review/fa/37/c7/a054a94b4c541e216ee3becb2fff8922.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4218044,
+            "full_path": "https://salt.tikicdn.com/ts/review/f7/9e/d4/cac1191c6b937c0153081e9a805caa98.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4218045,
+            "full_path": "https://salt.tikicdn.com/ts/review/a8/19/ca/b78a3db3cfc5d909b0534ab69c51630d.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4218046,
+            "full_path": "https://salt.tikicdn.com/ts/review/9d/f1/ce/2a7fa9e60fa9309b8837ea5ff640db87.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4218047,
+            "full_path": "https://salt.tikicdn.com/ts/review/6c/5a/51/a03fcfa935ed2af6c8b12fd728d62ecf.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1684926820,
+        "created_by": {
+          "id": 22086245,
+          "name": "Kiều Văn Trung",
+          "full_name": "Kiều Văn Trung",
+          "region": null,
+          "avatar_url": "//tiki.vn/assets/img/avatar.png",
+          "created_time": "2021-06-08 16:13:58",
+          "group_id": 8,
+          "purchased": true,
+          "purchased_at": 1684722961,
+          "contribute_info": {
+            "id": 22086245,
+            "name": "Kiều Văn Trung",
+            "avatar": "//tiki.vn/assets/img/avatar.png",
+            "summary": {
+              "joined_time": "Đã tham gia 4 năm",
+              "total_review": 10,
+              "total_thank": 12
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 39"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 39"],
+        "spid": 134773005,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2023-05-24 18:13:40",
+          "delivery_date": "2023-05-24 08:40:16",
+          "current_date": "2025-03-19 17:45:48",
+          "content": "Đã dùng 10 giờ",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 10 giờ."
+        },
+        "comments": [
+          {
+            "id": 2979251,
+            "review_id": 19226006,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "Thật vinh hạnh khi có được cơ duyên mua hàng từ bạn. Hy vọng đây sẽ là món hàng ý nghĩa! 6 năm bán đồ da thật, BỤI LEATHER sẽ luôn cố gắng hết mình mong giành được sự hài lòng từ bạn. Chúng tôi chỉ bán đồ DA THẬT và cố gắng tạo ra những sản phẩm hoàn thiện nhất, chất lượng tốt nhất, giá cả phải chăng nhất, và dịch vụ hoàn hảo nhất với sự đảm bảo và cầu thị từ tận đáy lòng của đội ngũ chúng tôi. BỤI LEATHER mong bạn sẽ quay lại lần nữa!",
+            "score": 0,
+            "create_at": 1684935389,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": { "agree": [], "disagree": [] },
+        "delivery_rating": [
+          { "question": "Thời gian giao hàng?", "option": "Giao đúng hẹn" },
+          { "question": "Thái độ của shipper?", "option": "Lịch sự" },
+          { "question": "Giờ giao hàng?", "option": "Có hẹn giờ trước" },
+          { "question": "Cách đóng gói sản phẩm?", "option": "Cẩn thận" }
+        ]
+      },
+      {
+        "id": 18573886,
+        "title": "Cực kì hài lòng",
+        "content": "Cận tết mà tiki giao hàng rất nhanh. Giày đẹp, so với mức giá săn sale chưa tới 500k thì quá ổn. Nếu bền sẽ quay lại mua tiêpd",
+        "status": "approved",
+        "thank_count": 1,
+        "score": 0.01118846,
+        "new_score": 0.1619933,
+        "customer_id": 8740331,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 4068339,
+            "full_path": "https://salt.tikicdn.com/ts/review/47/f2/62/d91fafcdeecead22f6a145ca3fbf7523.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4068340,
+            "full_path": "https://salt.tikicdn.com/ts/review/2f/b4/17/96ffbf2fd950fd0dbf147c0423c8bb15.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4068341,
+            "full_path": "https://salt.tikicdn.com/ts/review/ea/8c/76/cd156a7b055ff6c649cc359b5d6cb38b.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1672894709,
+        "created_by": {
+          "id": 8740331,
+          "name": "Phạm Thị Thuý Hằng",
+          "full_name": "Phạm Thị Thuý Hằng",
+          "region": null,
+          "avatar_url": "//tiki.vn/assets/img/avatar.png",
+          "created_time": "2018-11-03 10:49:08",
+          "group_id": 8,
+          "purchased": true,
+          "purchased_at": 1672647635,
+          "contribute_info": {
+            "id": 8740331,
+            "name": "Phạm Thị Thuý Hằng",
+            "avatar": "//tiki.vn/assets/img/avatar.png",
+            "summary": {
+              "joined_time": "Đã tham gia 7 năm",
+              "total_review": 16,
+              "total_thank": 2
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 40"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 40"],
+        "spid": 134773007,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2023-01-05 11:58:29",
+          "delivery_date": "2023-01-05 09:13:26",
+          "current_date": "2025-03-19 17:45:48",
+          "content": "Đã dùng 3 giờ",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 3 giờ."
+        },
+        "comments": [
+          {
+            "id": 2840441,
+            "review_id": 18573886,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "BỤI LEATHER OFFICIAL BỤI LEATHER OFFICIAL Thật vinh hạnh khi có được cơ duyên mua hàng từ bạn. Hy vọng đây sẽ là món hàng ý nghĩa! 6 năm bán đồ da thật, BỤI LEATHER sẽ luôn cố gắng hết mình mong giành được sự hài lòng từ bạn. Chúng tôi chỉ bán đồ DA THẬT và cố gắng tạo ra những sản phẩm hoàn thiện nhất, chất lượng tốt nhất, giá cả phải chăng nhất, và dịch vụ hoàn hảo nhất với sự đảm bảo và cầu thị từ tận đáy lòng của đội ngũ chúng tôi. BỤI LEATHER mong bạn sẽ quay lại lần nữa!",
+            "score": 0,
+            "create_at": 1672927782,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": { "agree": [], "disagree": [] },
+        "delivery_rating": []
+      },
+      {
+        "id": 19486811,
+        "title": "Cực kì hài lòng",
+        "content": "Giày vừa mua về, mới mang thì bị hở mũi giày. Vui lòng đổi lại hoặc có chính sách sửa chữa",
+        "status": "approved",
+        "thank_count": 0,
+        "score": 0.0084302,
+        "new_score": 0.16349662,
+        "customer_id": 1132625,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 4387117,
+            "full_path": "https://salt.tikicdn.com/ts/review/3e/ff/71/738b01aaffc7b8caca94dc8634b647fe.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4387118,
+            "full_path": "https://salt.tikicdn.com/ts/review/36/39/76/ec862228ef82a5b361b97c910a0c15c3.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4387119,
+            "full_path": "https://salt.tikicdn.com/ts/review/36/20/38/7f92f79c74599f1a5af539e21b65ba93.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1693011707,
+        "created_by": {
+          "id": 1132625,
+          "name": " Dung",
+          "full_name": " Dung",
+          "region": null,
+          "avatar_url": "//tiki.vn/assets/img/avatar.png",
+          "created_time": "2016-01-27 09:27:28",
+          "group_id": 8,
+          "purchased": true,
+          "purchased_at": 1729514333,
+          "contribute_info": {
+            "id": 1132625,
+            "name": " Dung",
+            "avatar": "//tiki.vn/assets/img/avatar.png",
+            "summary": {
+              "joined_time": "Đã tham gia 9 năm",
+              "total_review": 59,
+              "total_thank": 0
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 43"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 43"],
+        "spid": 134773013,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2023-08-26 08:01:47",
+          "delivery_date": "2023-07-05 15:41:24",
+          "current_date": "2025-03-19 17:45:48",
+          "content": "Đã dùng 2 tháng",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 2 tháng."
+        },
+        "comments": [
+          {
+            "id": 3037773,
+            "review_id": 19486811,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "Thật vinh hạnh khi có được cơ duyên mua hàng từ bạn. Hy vọng đây sẽ là món hàng ý nghĩa! 6 năm bán đồ da thật, BỤI LEATHER sẽ luôn cố gắng hết mình mong giành được sự hài lòng từ bạn. Chúng tôi chỉ bán đồ DA THẬT và cố gắng tạo ra những sản phẩm hoàn thiện nhất, chất lượng tốt nhất, giá cả phải chăng nhất, và dịch vụ hoàn hảo nhất với sự đảm bảo và cầu thị từ tận đáy lòng của đội ngũ chúng tôi. BỤI LEATHER mong bạn sẽ quay lại lần nữa!",
+            "score": 0,
+            "create_at": 1693109844,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": {
+          "agree": [
+            "Êm chân",
+            "Kiểu dáng đẹp",
+            "Màu sắc đẹp",
+            "Trọng lượng nhẹ"
+          ],
+          "disagree": []
+        },
+        "delivery_rating": []
+      },
+      {
+        "id": 13470527,
+        "title": "Cực kì hài lòng",
+        "content": "Giày đúng cỡ, vừa chân. Đóng hộp sản phẩm chuyên nghiệp, shop tặng đủ bộ phụ kiện bàn chải, si, khăn lau, thẻ bảo hành và cả thẻ giảm giá lần sau nữa chứ!",
+        "status": "approved",
+        "thank_count": 0,
+        "score": 44.44444444,
+        "new_score": 0.15774473,
+        "customer_id": 8902118,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 2812022,
+            "full_path": "https://salt.tikicdn.com/ts/review/92/18/b3/081dca47aec80b2968228c6f8d99c7f4.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 2812023,
+            "full_path": "https://salt.tikicdn.com/ts/review/df/8e/74/c1733e5bf6cfa5736280c1d6e3d29053.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 2812024,
+            "full_path": "https://salt.tikicdn.com/ts/review/37/85/cb/cc7666db524b2a523a833035f622ddfa.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1638001123,
+        "created_by": {
+          "id": 8902118,
+          "name": "Tung Tung",
+          "full_name": "Tung Tung",
+          "region": null,
+          "avatar_url": "https://salt.tikicdn.com/cache/512x512/ts/avatar/59/41/e5/c8937988b4596b1052296731040af3e0.png",
+          "created_time": "2018-11-11 16:38:15",
+          "purchased": true,
+          "purchased_at": 1637841626,
+          "contribute_info": {
+            "id": 8902118,
+            "name": "Tung Tung",
+            "avatar": "https://salt.tikicdn.com/cache/512x512/ts/avatar/59/41/e5/c8937988b4596b1052296731040af3e0.png",
+            "summary": {
+              "joined_time": "Đã tham gia 6 năm",
+              "total_review": 440,
+              "total_thank": 313
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 39"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 39"],
+        "spid": 134773005,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2021-11-27 15:18:43",
+          "delivery_date": "2021-11-27 14:31:06",
+          "current_date": "2025-03-19 17:45:48",
+          "content": "Đã dùng 1 giờ",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 1 giờ."
+        },
+        "comments": [
+          {
+            "id": 2205367,
+            "review_id": 13470527,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "Cảm ơn bạn đã tin yêu, ủng hộ shop và đánh giá 5 sao 😘😘😘. Hy vọng đây sẽ là một món hàng ý nghĩa! Với kinh nghiệm hơn 6 năm bán đồ đa thật, BỤI LEATHER sẽ luôn cố gắng hết mình để tạo ra những sản phẩm chất lượng nhất, giá phải chăng nhất và dịch vụ CSKH hoàn hảo nhất giúp KH có những trải nghiệm mua hàng tốt nhất. Hy vọng sẽ được phục vụ bạn ở trải nghiệm mua hàng tiếp theo 🥰🥰🥰",
+            "score": 0,
+            "create_at": 1648008070,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": { "agree": [], "disagree": [] },
+        "delivery_rating": []
+      },
+      {
+        "id": 17736417,
+        "title": "Cực kì hài lòng",
+        "content": "Form giày đẹp và sang, mang vào ôm chân nhưng vẫn thoải mái. Giá tốt. Chăm sóc KH tận tình, mình mua 1 đôi nhưng hơi rộng được hỗ trợ đổi trả nhanh chóng. Sau này mình sẽ mua thêm để tặng cho người thân. 10 điểm cho shop.",
+        "status": "approved",
+        "thank_count": 0,
+        "score": 0.94679186,
+        "new_score": 0.16207734,
+        "customer_id": 1932469,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 3888898,
+            "full_path": "https://salt.tikicdn.com/ts/review/4b/f8/56/90b454feb855dd78fd66389f7c848514.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1663565190,
+        "created_by": {
+          "id": 1932469,
+          "name": "Đoàn Thanh Phong",
+          "full_name": "Đoàn Thanh Phong",
+          "region": null,
+          "avatar_url": "https://salt.tikicdn.com/cache/512x512/ts/avatar/f2/5a/09/824c36fcf3aeb4b26825404ed051a171.png",
+          "created_time": "2016-11-29 20:12:21",
+          "group_id": 8,
+          "purchased": true,
+          "purchased_at": 1663200922,
+          "contribute_info": {
+            "id": 1932469,
+            "name": "Đoàn Thanh Phong",
+            "avatar": "https://salt.tikicdn.com/cache/512x512/ts/avatar/f2/5a/09/824c36fcf3aeb4b26825404ed051a171.png",
+            "summary": {
+              "joined_time": "Đã tham gia 8 năm",
+              "total_review": 48,
+              "total_thank": 0
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 42"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 42"],
+        "spid": 134773011,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2022-09-19 12:26:30",
+          "delivery_date": "2022-09-19 11:01:31",
+          "current_date": "2025-03-19 17:45:49",
+          "content": "Đã dùng 1 giờ",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 1 giờ."
+        },
+        "comments": [
+          {
+            "id": 2657421,
+            "review_id": 17736417,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "Thật vinh hạnh khi có được cơ duyên mua hàng từ bạn. Hy vọng đây sẽ là món hàng ý nghĩa! 6 năm bán đồ da thật, BỤI LEATHER sẽ luôn cố gắng hết mình mong giành được sự hài lòng từ bạn. Chúng tôi chỉ bán đồ DA THẬT và cố gắng tạo ra những sản phẩm hoàn thiện nhất, chất lượng tốt nhất, giá cả phải chăng nhất, và dịch vụ hoàn hảo nhất với sự đảm bảo và cầu thị từ tận đáy lòng của đội ngũ chúng tôi. BỤI LEATHER mong bạn sẽ quay lại lần nữa!",
+            "score": 0,
+            "create_at": 1663749359,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": { "agree": [], "disagree": [] },
+        "delivery_rating": []
+      }
+    ],
+    "paging": {
+      "total": 91,
+      "per_page": 5,
+      "current_page": 1,
+      "last_page": 19,
+      "from": 1,
+      "to": 5
+    },
+    "sort_options": [
+      [
+        { "label": "Hữu ích", "value": "score|desc" },
+        { "label": "Mới nhất", "value": "id|desc" },
+        { "label": "Có hình ảnh", "value": "has_image" }
+      ],
+      [
+        { "label": "Tất cả khách hàng", "value": "customer|all" },
+        { "label": "Khách đã mua hàng", "value": "bought" }
+      ],
+      [
+        { "label": "Tất cả sao", "value": "stars|all" },
+        { "label": "5 sao", "value": "stars|5" },
+        { "label": "4 sao", "value": "stars|4" },
+        { "label": "3 sao", "value": "stars|3" },
+        { "label": "2 sao", "value": "stars|2" },
+        { "label": "1 sao", "value": "stars|1" },
+        { "label": "Hài lòng", "value": "stars|4|5" },
+        { "label": "Chưa hài lòng", "value": "stars|1|2|3" }
+      ]
+    ],
+    "exclude_image": false,
+    "attribute_vote_summary": {
+      "product_id": 134773001,
+      "seller_id": 181498,
+      "number_of_vote_to_show": 20,
+      "votes": [
+        {
+          "attribute_id": "trong_luong_nhe",
+          "attribute_name": "Trọng lượng nhẹ",
+          "total_vote": 13,
+          "agree": 12,
+          "disagree": 0,
+          "no_idea": 1
+        },
+        {
+          "attribute_id": "chat_lieu_da_mem",
+          "attribute_name": "Chất liệu da mềm",
+          "total_vote": 4,
+          "agree": 4,
+          "disagree": 0,
+          "no_idea": 0
+        },
+        {
+          "attribute_id": "em_chan",
+          "attribute_name": "Êm chân",
+          "total_vote": 11,
+          "agree": 9,
+          "disagree": 0,
+          "no_idea": 2
+        },
+        {
+          "attribute_id": "mau_sac_dep",
+          "attribute_name": "Màu sắc đẹp",
+          "total_vote": 14,
+          "agree": 12,
+          "disagree": 0,
+          "no_idea": 2
+        }
+      ]
+    }
+  },
+  {
+    "stars": {
+      "1": { "count": 0, "percent": 0 },
+      "2": { "count": 0, "percent": 0 },
+      "3": { "count": 1, "percent": 1 },
+      "4": { "count": 13, "percent": 14 },
+      "5": { "count": 77, "percent": 85 }
+    },
+    "rating_average": 4.8,
+    "reviews_count": 91,
+    "review_photo": { "total": 27, "total_photo": 44 },
+    "data": [
+      {
+        "id": 19226006,
+        "title": "Cực kì hài lòng",
+        "content": "Mẫu mã đẹp, chắc chắn, êm chân, đúng size luôn",
+        "status": "approved",
+        "thank_count": 0,
+        "score": 55.55555556,
+        "new_score": 0.16392238,
+        "customer_id": 22086245,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 4218043,
+            "full_path": "https://salt.tikicdn.com/ts/review/fa/37/c7/a054a94b4c541e216ee3becb2fff8922.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4218044,
+            "full_path": "https://salt.tikicdn.com/ts/review/f7/9e/d4/cac1191c6b937c0153081e9a805caa98.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4218045,
+            "full_path": "https://salt.tikicdn.com/ts/review/a8/19/ca/b78a3db3cfc5d909b0534ab69c51630d.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4218046,
+            "full_path": "https://salt.tikicdn.com/ts/review/9d/f1/ce/2a7fa9e60fa9309b8837ea5ff640db87.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4218047,
+            "full_path": "https://salt.tikicdn.com/ts/review/6c/5a/51/a03fcfa935ed2af6c8b12fd728d62ecf.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1684926820,
+        "created_by": {
+          "id": 22086245,
+          "name": "Kiều Văn Trung",
+          "full_name": "Kiều Văn Trung",
+          "region": null,
+          "avatar_url": "//tiki.vn/assets/img/avatar.png",
+          "created_time": "2021-06-08 16:13:58",
+          "group_id": 8,
+          "purchased": true,
+          "purchased_at": 1684722961,
+          "contribute_info": {
+            "id": 22086245,
+            "name": "Kiều Văn Trung",
+            "avatar": "//tiki.vn/assets/img/avatar.png",
+            "summary": {
+              "joined_time": "Đã tham gia 4 năm",
+              "total_review": 10,
+              "total_thank": 12
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 39"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 39"],
+        "spid": 134773005,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2023-05-24 18:13:40",
+          "delivery_date": "2023-05-24 08:40:16",
+          "current_date": "2025-03-19 17:45:48",
+          "content": "Đã dùng 10 giờ",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 10 giờ."
+        },
+        "comments": [
+          {
+            "id": 2979251,
+            "review_id": 19226006,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "Thật vinh hạnh khi có được cơ duyên mua hàng từ bạn. Hy vọng đây sẽ là món hàng ý nghĩa! 6 năm bán đồ da thật, BỤI LEATHER sẽ luôn cố gắng hết mình mong giành được sự hài lòng từ bạn. Chúng tôi chỉ bán đồ DA THẬT và cố gắng tạo ra những sản phẩm hoàn thiện nhất, chất lượng tốt nhất, giá cả phải chăng nhất, và dịch vụ hoàn hảo nhất với sự đảm bảo và cầu thị từ tận đáy lòng của đội ngũ chúng tôi. BỤI LEATHER mong bạn sẽ quay lại lần nữa!",
+            "score": 0,
+            "create_at": 1684935389,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": { "agree": [], "disagree": [] },
+        "delivery_rating": [
+          { "question": "Thời gian giao hàng?", "option": "Giao đúng hẹn" },
+          { "question": "Thái độ của shipper?", "option": "Lịch sự" },
+          { "question": "Giờ giao hàng?", "option": "Có hẹn giờ trước" },
+          { "question": "Cách đóng gói sản phẩm?", "option": "Cẩn thận" }
+        ]
+      },
+      {
+        "id": 18573886,
+        "title": "Cực kì hài lòng",
+        "content": "Cận tết mà tiki giao hàng rất nhanh. Giày đẹp, so với mức giá săn sale chưa tới 500k thì quá ổn. Nếu bền sẽ quay lại mua tiêpd",
+        "status": "approved",
+        "thank_count": 1,
+        "score": 0.01118846,
+        "new_score": 0.1619933,
+        "customer_id": 8740331,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 4068339,
+            "full_path": "https://salt.tikicdn.com/ts/review/47/f2/62/d91fafcdeecead22f6a145ca3fbf7523.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4068340,
+            "full_path": "https://salt.tikicdn.com/ts/review/2f/b4/17/96ffbf2fd950fd0dbf147c0423c8bb15.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4068341,
+            "full_path": "https://salt.tikicdn.com/ts/review/ea/8c/76/cd156a7b055ff6c649cc359b5d6cb38b.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1672894709,
+        "created_by": {
+          "id": 8740331,
+          "name": "Phạm Thị Thuý Hằng",
+          "full_name": "Phạm Thị Thuý Hằng",
+          "region": null,
+          "avatar_url": "//tiki.vn/assets/img/avatar.png",
+          "created_time": "2018-11-03 10:49:08",
+          "group_id": 8,
+          "purchased": true,
+          "purchased_at": 1672647635,
+          "contribute_info": {
+            "id": 8740331,
+            "name": "Phạm Thị Thuý Hằng",
+            "avatar": "//tiki.vn/assets/img/avatar.png",
+            "summary": {
+              "joined_time": "Đã tham gia 7 năm",
+              "total_review": 16,
+              "total_thank": 2
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 40"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 40"],
+        "spid": 134773007,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2023-01-05 11:58:29",
+          "delivery_date": "2023-01-05 09:13:26",
+          "current_date": "2025-03-19 17:45:48",
+          "content": "Đã dùng 3 giờ",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 3 giờ."
+        },
+        "comments": [
+          {
+            "id": 2840441,
+            "review_id": 18573886,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "BỤI LEATHER OFFICIAL BỤI LEATHER OFFICIAL Thật vinh hạnh khi có được cơ duyên mua hàng từ bạn. Hy vọng đây sẽ là món hàng ý nghĩa! 6 năm bán đồ da thật, BỤI LEATHER sẽ luôn cố gắng hết mình mong giành được sự hài lòng từ bạn. Chúng tôi chỉ bán đồ DA THẬT và cố gắng tạo ra những sản phẩm hoàn thiện nhất, chất lượng tốt nhất, giá cả phải chăng nhất, và dịch vụ hoàn hảo nhất với sự đảm bảo và cầu thị từ tận đáy lòng của đội ngũ chúng tôi. BỤI LEATHER mong bạn sẽ quay lại lần nữa!",
+            "score": 0,
+            "create_at": 1672927782,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": { "agree": [], "disagree": [] },
+        "delivery_rating": []
+      },
+      {
+        "id": 19486811,
+        "title": "Cực kì hài lòng",
+        "content": "Giày vừa mua về, mới mang thì bị hở mũi giày. Vui lòng đổi lại hoặc có chính sách sửa chữa",
+        "status": "approved",
+        "thank_count": 0,
+        "score": 0.0084302,
+        "new_score": 0.16349662,
+        "customer_id": 1132625,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 4387117,
+            "full_path": "https://salt.tikicdn.com/ts/review/3e/ff/71/738b01aaffc7b8caca94dc8634b647fe.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4387118,
+            "full_path": "https://salt.tikicdn.com/ts/review/36/39/76/ec862228ef82a5b361b97c910a0c15c3.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4387119,
+            "full_path": "https://salt.tikicdn.com/ts/review/36/20/38/7f92f79c74599f1a5af539e21b65ba93.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1693011707,
+        "created_by": {
+          "id": 1132625,
+          "name": " Dung",
+          "full_name": " Dung",
+          "region": null,
+          "avatar_url": "//tiki.vn/assets/img/avatar.png",
+          "created_time": "2016-01-27 09:27:28",
+          "group_id": 8,
+          "purchased": true,
+          "purchased_at": 1729514333,
+          "contribute_info": {
+            "id": 1132625,
+            "name": " Dung",
+            "avatar": "//tiki.vn/assets/img/avatar.png",
+            "summary": {
+              "joined_time": "Đã tham gia 9 năm",
+              "total_review": 59,
+              "total_thank": 0
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 43"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 43"],
+        "spid": 134773013,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2023-08-26 08:01:47",
+          "delivery_date": "2023-07-05 15:41:24",
+          "current_date": "2025-03-19 17:45:48",
+          "content": "Đã dùng 2 tháng",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 2 tháng."
+        },
+        "comments": [
+          {
+            "id": 3037773,
+            "review_id": 19486811,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "Thật vinh hạnh khi có được cơ duyên mua hàng từ bạn. Hy vọng đây sẽ là món hàng ý nghĩa! 6 năm bán đồ da thật, BỤI LEATHER sẽ luôn cố gắng hết mình mong giành được sự hài lòng từ bạn. Chúng tôi chỉ bán đồ DA THẬT và cố gắng tạo ra những sản phẩm hoàn thiện nhất, chất lượng tốt nhất, giá cả phải chăng nhất, và dịch vụ hoàn hảo nhất với sự đảm bảo và cầu thị từ tận đáy lòng của đội ngũ chúng tôi. BỤI LEATHER mong bạn sẽ quay lại lần nữa!",
+            "score": 0,
+            "create_at": 1693109844,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": {
+          "agree": [
+            "Êm chân",
+            "Kiểu dáng đẹp",
+            "Màu sắc đẹp",
+            "Trọng lượng nhẹ"
+          ],
+          "disagree": []
+        },
+        "delivery_rating": []
+      },
+      {
+        "id": 13470527,
+        "title": "Cực kì hài lòng",
+        "content": "Giày đúng cỡ, vừa chân. Đóng hộp sản phẩm chuyên nghiệp, shop tặng đủ bộ phụ kiện bàn chải, si, khăn lau, thẻ bảo hành và cả thẻ giảm giá lần sau nữa chứ!",
+        "status": "approved",
+        "thank_count": 0,
+        "score": 44.44444444,
+        "new_score": 0.15774473,
+        "customer_id": 8902118,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 2812022,
+            "full_path": "https://salt.tikicdn.com/ts/review/92/18/b3/081dca47aec80b2968228c6f8d99c7f4.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 2812023,
+            "full_path": "https://salt.tikicdn.com/ts/review/df/8e/74/c1733e5bf6cfa5736280c1d6e3d29053.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 2812024,
+            "full_path": "https://salt.tikicdn.com/ts/review/37/85/cb/cc7666db524b2a523a833035f622ddfa.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1638001123,
+        "created_by": {
+          "id": 8902118,
+          "name": "Tung Tung",
+          "full_name": "Tung Tung",
+          "region": null,
+          "avatar_url": "https://salt.tikicdn.com/cache/512x512/ts/avatar/59/41/e5/c8937988b4596b1052296731040af3e0.png",
+          "created_time": "2018-11-11 16:38:15",
+          "purchased": true,
+          "purchased_at": 1637841626,
+          "contribute_info": {
+            "id": 8902118,
+            "name": "Tung Tung",
+            "avatar": "https://salt.tikicdn.com/cache/512x512/ts/avatar/59/41/e5/c8937988b4596b1052296731040af3e0.png",
+            "summary": {
+              "joined_time": "Đã tham gia 6 năm",
+              "total_review": 440,
+              "total_thank": 313
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 39"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 39"],
+        "spid": 134773005,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2021-11-27 15:18:43",
+          "delivery_date": "2021-11-27 14:31:06",
+          "current_date": "2025-03-19 17:45:48",
+          "content": "Đã dùng 1 giờ",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 1 giờ."
+        },
+        "comments": [
+          {
+            "id": 2205367,
+            "review_id": 13470527,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "Cảm ơn bạn đã tin yêu, ủng hộ shop và đánh giá 5 sao 😘😘😘. Hy vọng đây sẽ là một món hàng ý nghĩa! Với kinh nghiệm hơn 6 năm bán đồ đa thật, BỤI LEATHER sẽ luôn cố gắng hết mình để tạo ra những sản phẩm chất lượng nhất, giá phải chăng nhất và dịch vụ CSKH hoàn hảo nhất giúp KH có những trải nghiệm mua hàng tốt nhất. Hy vọng sẽ được phục vụ bạn ở trải nghiệm mua hàng tiếp theo 🥰🥰🥰",
+            "score": 0,
+            "create_at": 1648008070,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": { "agree": [], "disagree": [] },
+        "delivery_rating": []
+      },
+      {
+        "id": 17736417,
+        "title": "Cực kì hài lòng",
+        "content": "Form giày đẹp và sang, mang vào ôm chân nhưng vẫn thoải mái. Giá tốt. Chăm sóc KH tận tình, mình mua 1 đôi nhưng hơi rộng được hỗ trợ đổi trả nhanh chóng. Sau này mình sẽ mua thêm để tặng cho người thân. 10 điểm cho shop.",
+        "status": "approved",
+        "thank_count": 0,
+        "score": 0.94679186,
+        "new_score": 0.16207734,
+        "customer_id": 1932469,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 3888898,
+            "full_path": "https://salt.tikicdn.com/ts/review/4b/f8/56/90b454feb855dd78fd66389f7c848514.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1663565190,
+        "created_by": {
+          "id": 1932469,
+          "name": "Đoàn Thanh Phong",
+          "full_name": "Đoàn Thanh Phong",
+          "region": null,
+          "avatar_url": "https://salt.tikicdn.com/cache/512x512/ts/avatar/f2/5a/09/824c36fcf3aeb4b26825404ed051a171.png",
+          "created_time": "2016-11-29 20:12:21",
+          "group_id": 8,
+          "purchased": true,
+          "purchased_at": 1663200922,
+          "contribute_info": {
+            "id": 1932469,
+            "name": "Đoàn Thanh Phong",
+            "avatar": "https://salt.tikicdn.com/cache/512x512/ts/avatar/f2/5a/09/824c36fcf3aeb4b26825404ed051a171.png",
+            "summary": {
+              "joined_time": "Đã tham gia 8 năm",
+              "total_review": 48,
+              "total_thank": 0
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 42"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 42"],
+        "spid": 134773011,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2022-09-19 12:26:30",
+          "delivery_date": "2022-09-19 11:01:31",
+          "current_date": "2025-03-19 17:45:49",
+          "content": "Đã dùng 1 giờ",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 1 giờ."
+        },
+        "comments": [
+          {
+            "id": 2657421,
+            "review_id": 17736417,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "Thật vinh hạnh khi có được cơ duyên mua hàng từ bạn. Hy vọng đây sẽ là món hàng ý nghĩa! 6 năm bán đồ da thật, BỤI LEATHER sẽ luôn cố gắng hết mình mong giành được sự hài lòng từ bạn. Chúng tôi chỉ bán đồ DA THẬT và cố gắng tạo ra những sản phẩm hoàn thiện nhất, chất lượng tốt nhất, giá cả phải chăng nhất, và dịch vụ hoàn hảo nhất với sự đảm bảo và cầu thị từ tận đáy lòng của đội ngũ chúng tôi. BỤI LEATHER mong bạn sẽ quay lại lần nữa!",
+            "score": 0,
+            "create_at": 1663749359,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": { "agree": [], "disagree": [] },
+        "delivery_rating": []
+      }
+    ],
+    "paging": {
+      "total": 91,
+      "per_page": 5,
+      "current_page": 1,
+      "last_page": 19,
+      "from": 1,
+      "to": 5
+    },
+    "sort_options": [
+      [
+        { "label": "Hữu ích", "value": "score|desc" },
+        { "label": "Mới nhất", "value": "id|desc" },
+        { "label": "Có hình ảnh", "value": "has_image" }
+      ],
+      [
+        { "label": "Tất cả khách hàng", "value": "customer|all" },
+        { "label": "Khách đã mua hàng", "value": "bought" }
+      ],
+      [
+        { "label": "Tất cả sao", "value": "stars|all" },
+        { "label": "5 sao", "value": "stars|5" },
+        { "label": "4 sao", "value": "stars|4" },
+        { "label": "3 sao", "value": "stars|3" },
+        { "label": "2 sao", "value": "stars|2" },
+        { "label": "1 sao", "value": "stars|1" },
+        { "label": "Hài lòng", "value": "stars|4|5" },
+        { "label": "Chưa hài lòng", "value": "stars|1|2|3" }
+      ]
+    ],
+    "exclude_image": false,
+    "attribute_vote_summary": {
+      "product_id": 134773001,
+      "seller_id": 181498,
+      "number_of_vote_to_show": 20,
+      "votes": [
+        {
+          "attribute_id": "trong_luong_nhe",
+          "attribute_name": "Trọng lượng nhẹ",
+          "total_vote": 13,
+          "agree": 12,
+          "disagree": 0,
+          "no_idea": 1
+        },
+        {
+          "attribute_id": "chat_lieu_da_mem",
+          "attribute_name": "Chất liệu da mềm",
+          "total_vote": 4,
+          "agree": 4,
+          "disagree": 0,
+          "no_idea": 0
+        },
+        {
+          "attribute_id": "em_chan",
+          "attribute_name": "Êm chân",
+          "total_vote": 11,
+          "agree": 9,
+          "disagree": 0,
+          "no_idea": 2
+        },
+        {
+          "attribute_id": "mau_sac_dep",
+          "attribute_name": "Màu sắc đẹp",
+          "total_vote": 14,
+          "agree": 12,
+          "disagree": 0,
+          "no_idea": 2
+        }
+      ]
+    }
+  },
+  {
+    "stars": {
+      "1": { "count": 0, "percent": 0 },
+      "2": { "count": 0, "percent": 0 },
+      "3": { "count": 1, "percent": 1 },
+      "4": { "count": 13, "percent": 14 },
+      "5": { "count": 77, "percent": 85 }
+    },
+    "rating_average": 4.8,
+    "reviews_count": 91,
+    "review_photo": { "total": 27, "total_photo": 44 },
+    "data": [
+      {
+        "id": 19226006,
+        "title": "Cực kì hài lòng",
+        "content": "Mẫu mã đẹp, chắc chắn, êm chân, đúng size luôn",
+        "status": "approved",
+        "thank_count": 0,
+        "score": 55.55555556,
+        "new_score": 0.16392238,
+        "customer_id": 22086245,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 4218043,
+            "full_path": "https://salt.tikicdn.com/ts/review/fa/37/c7/a054a94b4c541e216ee3becb2fff8922.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4218044,
+            "full_path": "https://salt.tikicdn.com/ts/review/f7/9e/d4/cac1191c6b937c0153081e9a805caa98.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4218045,
+            "full_path": "https://salt.tikicdn.com/ts/review/a8/19/ca/b78a3db3cfc5d909b0534ab69c51630d.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4218046,
+            "full_path": "https://salt.tikicdn.com/ts/review/9d/f1/ce/2a7fa9e60fa9309b8837ea5ff640db87.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4218047,
+            "full_path": "https://salt.tikicdn.com/ts/review/6c/5a/51/a03fcfa935ed2af6c8b12fd728d62ecf.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1684926820,
+        "created_by": {
+          "id": 22086245,
+          "name": "Kiều Văn Trung",
+          "full_name": "Kiều Văn Trung",
+          "region": null,
+          "avatar_url": "//tiki.vn/assets/img/avatar.png",
+          "created_time": "2021-06-08 16:13:58",
+          "group_id": 8,
+          "purchased": true,
+          "purchased_at": 1684722961,
+          "contribute_info": {
+            "id": 22086245,
+            "name": "Kiều Văn Trung",
+            "avatar": "//tiki.vn/assets/img/avatar.png",
+            "summary": {
+              "joined_time": "Đã tham gia 4 năm",
+              "total_review": 10,
+              "total_thank": 12
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 39"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 39"],
+        "spid": 134773005,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2023-05-24 18:13:40",
+          "delivery_date": "2023-05-24 08:40:16",
+          "current_date": "2025-03-19 17:45:48",
+          "content": "Đã dùng 10 giờ",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 10 giờ."
+        },
+        "comments": [
+          {
+            "id": 2979251,
+            "review_id": 19226006,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "Thật vinh hạnh khi có được cơ duyên mua hàng từ bạn. Hy vọng đây sẽ là món hàng ý nghĩa! 6 năm bán đồ da thật, BỤI LEATHER sẽ luôn cố gắng hết mình mong giành được sự hài lòng từ bạn. Chúng tôi chỉ bán đồ DA THẬT và cố gắng tạo ra những sản phẩm hoàn thiện nhất, chất lượng tốt nhất, giá cả phải chăng nhất, và dịch vụ hoàn hảo nhất với sự đảm bảo và cầu thị từ tận đáy lòng của đội ngũ chúng tôi. BỤI LEATHER mong bạn sẽ quay lại lần nữa!",
+            "score": 0,
+            "create_at": 1684935389,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": { "agree": [], "disagree": [] },
+        "delivery_rating": [
+          { "question": "Thời gian giao hàng?", "option": "Giao đúng hẹn" },
+          { "question": "Thái độ của shipper?", "option": "Lịch sự" },
+          { "question": "Giờ giao hàng?", "option": "Có hẹn giờ trước" },
+          { "question": "Cách đóng gói sản phẩm?", "option": "Cẩn thận" }
+        ]
+      },
+      {
+        "id": 18573886,
+        "title": "Cực kì hài lòng",
+        "content": "Cận tết mà tiki giao hàng rất nhanh. Giày đẹp, so với mức giá săn sale chưa tới 500k thì quá ổn. Nếu bền sẽ quay lại mua tiêpd",
+        "status": "approved",
+        "thank_count": 1,
+        "score": 0.01118846,
+        "new_score": 0.1619933,
+        "customer_id": 8740331,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 4068339,
+            "full_path": "https://salt.tikicdn.com/ts/review/47/f2/62/d91fafcdeecead22f6a145ca3fbf7523.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4068340,
+            "full_path": "https://salt.tikicdn.com/ts/review/2f/b4/17/96ffbf2fd950fd0dbf147c0423c8bb15.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4068341,
+            "full_path": "https://salt.tikicdn.com/ts/review/ea/8c/76/cd156a7b055ff6c649cc359b5d6cb38b.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1672894709,
+        "created_by": {
+          "id": 8740331,
+          "name": "Phạm Thị Thuý Hằng",
+          "full_name": "Phạm Thị Thuý Hằng",
+          "region": null,
+          "avatar_url": "//tiki.vn/assets/img/avatar.png",
+          "created_time": "2018-11-03 10:49:08",
+          "group_id": 8,
+          "purchased": true,
+          "purchased_at": 1672647635,
+          "contribute_info": {
+            "id": 8740331,
+            "name": "Phạm Thị Thuý Hằng",
+            "avatar": "//tiki.vn/assets/img/avatar.png",
+            "summary": {
+              "joined_time": "Đã tham gia 7 năm",
+              "total_review": 16,
+              "total_thank": 2
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 40"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 40"],
+        "spid": 134773007,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2023-01-05 11:58:29",
+          "delivery_date": "2023-01-05 09:13:26",
+          "current_date": "2025-03-19 17:45:48",
+          "content": "Đã dùng 3 giờ",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 3 giờ."
+        },
+        "comments": [
+          {
+            "id": 2840441,
+            "review_id": 18573886,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "BỤI LEATHER OFFICIAL BỤI LEATHER OFFICIAL Thật vinh hạnh khi có được cơ duyên mua hàng từ bạn. Hy vọng đây sẽ là món hàng ý nghĩa! 6 năm bán đồ da thật, BỤI LEATHER sẽ luôn cố gắng hết mình mong giành được sự hài lòng từ bạn. Chúng tôi chỉ bán đồ DA THẬT và cố gắng tạo ra những sản phẩm hoàn thiện nhất, chất lượng tốt nhất, giá cả phải chăng nhất, và dịch vụ hoàn hảo nhất với sự đảm bảo và cầu thị từ tận đáy lòng của đội ngũ chúng tôi. BỤI LEATHER mong bạn sẽ quay lại lần nữa!",
+            "score": 0,
+            "create_at": 1672927782,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": { "agree": [], "disagree": [] },
+        "delivery_rating": []
+      },
+      {
+        "id": 19486811,
+        "title": "Cực kì hài lòng",
+        "content": "Giày vừa mua về, mới mang thì bị hở mũi giày. Vui lòng đổi lại hoặc có chính sách sửa chữa",
+        "status": "approved",
+        "thank_count": 0,
+        "score": 0.0084302,
+        "new_score": 0.16349662,
+        "customer_id": 1132625,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 4387117,
+            "full_path": "https://salt.tikicdn.com/ts/review/3e/ff/71/738b01aaffc7b8caca94dc8634b647fe.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4387118,
+            "full_path": "https://salt.tikicdn.com/ts/review/36/39/76/ec862228ef82a5b361b97c910a0c15c3.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 4387119,
+            "full_path": "https://salt.tikicdn.com/ts/review/36/20/38/7f92f79c74599f1a5af539e21b65ba93.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1693011707,
+        "created_by": {
+          "id": 1132625,
+          "name": " Dung",
+          "full_name": " Dung",
+          "region": null,
+          "avatar_url": "//tiki.vn/assets/img/avatar.png",
+          "created_time": "2016-01-27 09:27:28",
+          "group_id": 8,
+          "purchased": true,
+          "purchased_at": 1729514333,
+          "contribute_info": {
+            "id": 1132625,
+            "name": " Dung",
+            "avatar": "//tiki.vn/assets/img/avatar.png",
+            "summary": {
+              "joined_time": "Đã tham gia 9 năm",
+              "total_review": 59,
+              "total_thank": 0
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 43"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 43"],
+        "spid": 134773013,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2023-08-26 08:01:47",
+          "delivery_date": "2023-07-05 15:41:24",
+          "current_date": "2025-03-19 17:45:48",
+          "content": "Đã dùng 2 tháng",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 2 tháng."
+        },
+        "comments": [
+          {
+            "id": 3037773,
+            "review_id": 19486811,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "Thật vinh hạnh khi có được cơ duyên mua hàng từ bạn. Hy vọng đây sẽ là món hàng ý nghĩa! 6 năm bán đồ da thật, BỤI LEATHER sẽ luôn cố gắng hết mình mong giành được sự hài lòng từ bạn. Chúng tôi chỉ bán đồ DA THẬT và cố gắng tạo ra những sản phẩm hoàn thiện nhất, chất lượng tốt nhất, giá cả phải chăng nhất, và dịch vụ hoàn hảo nhất với sự đảm bảo và cầu thị từ tận đáy lòng của đội ngũ chúng tôi. BỤI LEATHER mong bạn sẽ quay lại lần nữa!",
+            "score": 0,
+            "create_at": 1693109844,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": {
+          "agree": [
+            "Êm chân",
+            "Kiểu dáng đẹp",
+            "Màu sắc đẹp",
+            "Trọng lượng nhẹ"
+          ],
+          "disagree": []
+        },
+        "delivery_rating": []
+      },
+      {
+        "id": 13470527,
+        "title": "Cực kì hài lòng",
+        "content": "Giày đúng cỡ, vừa chân. Đóng hộp sản phẩm chuyên nghiệp, shop tặng đủ bộ phụ kiện bàn chải, si, khăn lau, thẻ bảo hành và cả thẻ giảm giá lần sau nữa chứ!",
+        "status": "approved",
+        "thank_count": 0,
+        "score": 44.44444444,
+        "new_score": 0.15774473,
+        "customer_id": 8902118,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 2812022,
+            "full_path": "https://salt.tikicdn.com/ts/review/92/18/b3/081dca47aec80b2968228c6f8d99c7f4.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 2812023,
+            "full_path": "https://salt.tikicdn.com/ts/review/df/8e/74/c1733e5bf6cfa5736280c1d6e3d29053.jpg",
+            "status": "approved"
+          },
+          {
+            "id": 2812024,
+            "full_path": "https://salt.tikicdn.com/ts/review/37/85/cb/cc7666db524b2a523a833035f622ddfa.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1638001123,
+        "created_by": {
+          "id": 8902118,
+          "name": "Tung Tung",
+          "full_name": "Tung Tung",
+          "region": null,
+          "avatar_url": "https://salt.tikicdn.com/cache/512x512/ts/avatar/59/41/e5/c8937988b4596b1052296731040af3e0.png",
+          "created_time": "2018-11-11 16:38:15",
+          "purchased": true,
+          "purchased_at": 1637841626,
+          "contribute_info": {
+            "id": 8902118,
+            "name": "Tung Tung",
+            "avatar": "https://salt.tikicdn.com/cache/512x512/ts/avatar/59/41/e5/c8937988b4596b1052296731040af3e0.png",
+            "summary": {
+              "joined_time": "Đã tham gia 6 năm",
+              "total_review": 440,
+              "total_thank": 313
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 39"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 39"],
+        "spid": 134773005,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2021-11-27 15:18:43",
+          "delivery_date": "2021-11-27 14:31:06",
+          "current_date": "2025-03-19 17:45:48",
+          "content": "Đã dùng 1 giờ",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 1 giờ."
+        },
+        "comments": [
+          {
+            "id": 2205367,
+            "review_id": 13470527,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "Cảm ơn bạn đã tin yêu, ủng hộ shop và đánh giá 5 sao 😘😘😘. Hy vọng đây sẽ là một món hàng ý nghĩa! Với kinh nghiệm hơn 6 năm bán đồ đa thật, BỤI LEATHER sẽ luôn cố gắng hết mình để tạo ra những sản phẩm chất lượng nhất, giá phải chăng nhất và dịch vụ CSKH hoàn hảo nhất giúp KH có những trải nghiệm mua hàng tốt nhất. Hy vọng sẽ được phục vụ bạn ở trải nghiệm mua hàng tiếp theo 🥰🥰🥰",
+            "score": 0,
+            "create_at": 1648008070,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": { "agree": [], "disagree": [] },
+        "delivery_rating": []
+      },
+      {
+        "id": 17736417,
+        "title": "Cực kì hài lòng",
+        "content": "Form giày đẹp và sang, mang vào ôm chân nhưng vẫn thoải mái. Giá tốt. Chăm sóc KH tận tình, mình mua 1 đôi nhưng hơi rộng được hỗ trợ đổi trả nhanh chóng. Sau này mình sẽ mua thêm để tặng cho người thân. 10 điểm cho shop.",
+        "status": "approved",
+        "thank_count": 0,
+        "score": 0.94679186,
+        "new_score": 0.16207734,
+        "customer_id": 1932469,
+        "comment_count": 1,
+        "rating": 5,
+        "images": [
+          {
+            "id": 3888898,
+            "full_path": "https://salt.tikicdn.com/ts/review/4b/f8/56/90b454feb855dd78fd66389f7c848514.jpg",
+            "status": "approved"
+          }
+        ],
+        "thanked": false,
+        "created_at": 1663565190,
+        "created_by": {
+          "id": 1932469,
+          "name": "Đoàn Thanh Phong",
+          "full_name": "Đoàn Thanh Phong",
+          "region": null,
+          "avatar_url": "https://salt.tikicdn.com/cache/512x512/ts/avatar/f2/5a/09/824c36fcf3aeb4b26825404ed051a171.png",
+          "created_time": "2016-11-29 20:12:21",
+          "group_id": 8,
+          "purchased": true,
+          "purchased_at": 1663200922,
+          "contribute_info": {
+            "id": 1932469,
+            "name": "Đoàn Thanh Phong",
+            "avatar": "https://salt.tikicdn.com/cache/512x512/ts/avatar/f2/5a/09/824c36fcf3aeb4b26825404ed051a171.png",
+            "summary": {
+              "joined_time": "Đã tham gia 8 năm",
+              "total_review": 48,
+              "total_thank": 0
+            }
+          }
+        },
+        "suggestions": [],
+        "attributes": [
+          "Mua từ nhà bán BỤI LEATHER OFFICIAL",
+          "Màu Màu Đen",
+          "Kích cỡ (Size) 42"
+        ],
+        "product_attributes": ["Màu: Màu Đen", "Kích cỡ (Size): 42"],
+        "spid": 134773011,
+        "is_photo": true,
+        "seller": {
+          "id": 181498,
+          "name": "BỤI LEATHER OFFICIAL",
+          "logo": "6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg"
+        },
+        "product_id": 134773001,
+        "timeline": {
+          "review_created_date": "2022-09-19 12:26:30",
+          "delivery_date": "2022-09-19 11:01:31",
+          "current_date": "2025-03-19 17:45:49",
+          "content": "Đã dùng 1 giờ",
+          "explain": "Khi viết đánh giá, khách hàng đã dùng sản phẩm 1 giờ."
+        },
+        "comments": [
+          {
+            "id": 2657421,
+            "review_id": 17736417,
+            "commentator": "seller",
+            "customer_id": 181498,
+            "fullname": "BỤI LEATHER OFFICIAL",
+            "avatar_url": "https://vcdn.tikicdn.com/ts/seller/6c/76/b8/119b3a6a7b3a87a33dad20ba696ed92e.jpg",
+            "content": "Thật vinh hạnh khi có được cơ duyên mua hàng từ bạn. Hy vọng đây sẽ là món hàng ý nghĩa! 6 năm bán đồ da thật, BỤI LEATHER sẽ luôn cố gắng hết mình mong giành được sự hài lòng từ bạn. Chúng tôi chỉ bán đồ DA THẬT và cố gắng tạo ra những sản phẩm hoàn thiện nhất, chất lượng tốt nhất, giá cả phải chăng nhất, và dịch vụ hoàn hảo nhất với sự đảm bảo và cầu thị từ tận đáy lòng của đội ngũ chúng tôi. BỤI LEATHER mong bạn sẽ quay lại lần nữa!",
+            "score": 0,
+            "create_at": 1663749359,
+            "badge": "https://salt.tikicdn.com/ts/review/05/6f/c0/d7462c4721ae3d6aabb2f51ff13fa44f.png",
+            "status": 2,
+            "is_reported": false
+          }
+        ],
+        "vote_attributes": { "agree": [], "disagree": [] },
+        "delivery_rating": []
+      }
+    ],
+    "paging": {
+      "total": 91,
+      "per_page": 5,
+      "current_page": 1,
+      "last_page": 19,
+      "from": 1,
+      "to": 5
+    },
+    "sort_options": [
+      [
+        { "label": "Hữu ích", "value": "score|desc" },
+        { "label": "Mới nhất", "value": "id|desc" },
+        { "label": "Có hình ảnh", "value": "has_image" }
+      ],
+      [
+        { "label": "Tất cả khách hàng", "value": "customer|all" },
+        { "label": "Khách đã mua hàng", "value": "bought" }
+      ],
+      [
+        { "label": "Tất cả sao", "value": "stars|all" },
+        { "label": "5 sao", "value": "stars|5" },
+        { "label": "4 sao", "value": "stars|4" },
+        { "label": "3 sao", "value": "stars|3" },
+        { "label": "2 sao", "value": "stars|2" },
+        { "label": "1 sao", "value": "stars|1" },
+        { "label": "Hài lòng", "value": "stars|4|5" },
+        { "label": "Chưa hài lòng", "value": "stars|1|2|3" }
+      ]
+    ],
+    "exclude_image": false,
+    "attribute_vote_summary": {
+      "product_id": 134773001,
+      "seller_id": 181498,
+      "number_of_vote_to_show": 20,
+      "votes": [
+        {
+          "attribute_id": "trong_luong_nhe",
+          "attribute_name": "Trọng lượng nhẹ",
+          "total_vote": 13,
+          "agree": 12,
+          "disagree": 0,
+          "no_idea": 1
+        },
+        {
+          "attribute_id": "chat_lieu_da_mem",
+          "attribute_name": "Chất liệu da mềm",
+          "total_vote": 4,
+          "agree": 4,
+          "disagree": 0,
+          "no_idea": 0
+        },
+        {
+          "attribute_id": "em_chan",
+          "attribute_name": "Êm chân",
+          "total_vote": 11,
+          "agree": 9,
+          "disagree": 0,
+          "no_idea": 2
+        },
+        {
+          "attribute_id": "mau_sac_dep",
+          "attribute_name": "Màu sắc đẹp",
+          "total_vote": 14,
+          "agree": 12,
+          "disagree": 0,
+          "no_idea": 2
+        }
+      ]
+    }
+  }
+]

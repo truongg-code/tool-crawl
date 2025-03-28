@@ -13,8 +13,8 @@ const {
 } = require("../ShopProducts/ShopProductController");
 
 const limitComment = 30;
-// const starArr = [1, 2, 3, 4, 5];
-const starArr = [5];
+const starArr = [1, 2, 3, 4, 5];
+// const starArr = [5];
 
 const processText = (text) => {
   if (!text) return null;

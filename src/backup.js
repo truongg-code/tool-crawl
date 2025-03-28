@@ -195,3 +195,5 @@ app.listen(PORT, () => {
 //   "fit_fit_percentage": 87,
 //   "fit_large_percentage": 13
 // },
+
+// https://www.lazada.vn/products/ke-nhua-co-banh-xe-3-5-tang-xe-day-spa-de-do-da-nang-ke-tien-loi-i2809880673-s14056111117.html?pvid=7fe8e4be-6f7c-4caa-9063-7bb280ecb948&search=jfy&scm=1007.45039.397834.0&priceCompare=skuId%3A14056111117%3Bsource%3Atpp-recommend-plugin-32104%3Bsn%3A7fe8e4be-6f7c-4caa-9063-7bb280ecb948%3BoriginPrice%3A32000%3BdisplayPrice%3A32000%3BsinglePromotionId%3A-1%3BsingleToolCode%3AmockedSalePrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1742292199191&spm=a2o4n.homepage.just4u.d_2809880673

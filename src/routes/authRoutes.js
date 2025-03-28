@@ -70,7 +70,7 @@ router.post("/login", (req, res) => {
     if (results.length === 0) {
       return res
         .status(400)
-        .json({ message: "Email hoặc mật khẩu không đúng" });
+        .json({ message: "Email hoặc mật khẩu không đúng", isOk: false });
     }
 
     const user = results[0];
@@ -84,7 +84,7 @@ router.post("/login", (req, res) => {
       if (!isMatch) {
         return res
           .status(400)
-          .json({ message: "Email hoặc mật khẩu không đúng" });
+          .json({ message: "Email hoặc mật khẩu không đúng", isOk: false });
       }
 
       // Tao JWT Token
@@ -93,6 +93,7 @@ router.post("/login", (req, res) => {
       });
 
       res.json({
+        isOk: true,
         token,
         user: {
           id: user.id,
