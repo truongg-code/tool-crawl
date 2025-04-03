@@ -4,14 +4,14 @@ const {
   addCollection,
   getCollectionsByUserId,
   getUserCollectionsWithItems,
-  addItemToCollection,
+  addItemToMultipleCollections,
 } = require("../controller/Collections/CollectionController");
 
 const router = express.Router();
 
 const collectionApiRoutes = (app) => {
   router.post("/add-collection", addCollection);
-  router.post("/add-item-to-collection", addItemToCollection);
+  router.post("/add-item-to-collections", addItemToMultipleCollections);
   router.get("/get-collections", getCollectionsByUserId);
   router.get("/get-collections-with-items", getUserCollectionsWithItems);
 

@@ -149,11 +149,10 @@ const getUserCollectionsWithItems = (req, res) => {
   });
 };
 
-// Hàm thêm item vào collection
-const addItemToCollection = async (req, res) => {
-  const { collection_id, product } = req.body; // Lấy collection_id và product từ request body
+// Hàm thêm item vào nhiều collectionss
+const addItemToMultipleCollections = async (req, res) => {
+  const { product, collections, quantity } = req.body; // Lấy product, collections và quantity từ request body
   const { id, name, description, price, point, url } = product;
-  const quantity = req.body.quantity;
 
   try {
     // Kiểm tra xem sản phẩm đã tồn tại trong bảng `products` chưa
@@ -178,87 +177,83 @@ const addItemToCollection = async (req, res) => {
               console.error("Error inserting product:", err);
               return res
                 .status(500)
-                .json({ message: "Error inserting product", isOk: false });
+                .json({ isOk: false, message: "Error inserting product" });
             }
-            // Sau khi thêm sản phẩm, tiếp tục thêm item vào collection
-            addItemToCollectionHelper(collection_id, id, quantity, res);
+            // Sau khi thêm sản phẩm, tiếp tục thêm item vào mỗi collection
+            addItemToMultipleCollectionsHelper(collections, id, quantity, res);
           }
         );
       } else {
-        // Nếu sản phẩm đã tồn tại, tiếp tục thêm item vào collection
-        addItemToCollectionHelper(collection_id, id, quantity, res);
+        // Nếu sản phẩm đã tồn tại, tiếp tục thêm item vào các collection
+        addItemToMultipleCollectionsHelper(collections, id, quantity, res);
       }
     });
   } catch (error) {
     console.error("Error in addItemToCollection:", error);
     return res
       .status(500)
-      .json({ message: "Internal server error", isOk: false });
+      .json({ isOk: false, message: "Internal server error" });
   }
 };
 
-//function để thêm item vào collection hoặc cập nhật quantity nếu đã có
-const addItemToCollectionHelper = (
-  collection_id,
+// Helper function để thêm item vào các collection hoặc cập nhật quantity nếu đã có
+const addItemToMultipleCollectionsHelper = (
+  collections,
   product_id,
   quantity,
   res
 ) => {
-  // Kiểm tra xem item đã có trong collection chưa
-  const checkItemQuery =
-    "SELECT * FROM items WHERE collection_id = ? AND product_id = ?";
-  db.query(checkItemQuery, [collection_id, product_id], (err, result) => {
-    if (err) {
-      console.error("Error checking item existence:", err);
-      return res
-        .status(500)
-        .json({ message: "Error checking item existence", isOk: false });
-    }
+  collections.forEach((collection_id) => {
+    // Kiểm tra xem item đã có trong collection chưa
+    const checkItemQuery =
+      "SELECT * FROM items WHERE collection_id = ? AND product_id = ?";
+    db.query(checkItemQuery, [collection_id, product_id], (err, result) => {
+      if (err) {
+        console.error("Error checking item existence:", err);
+        return res
+          .status(500)
+          .json({ isOk: false, message: "Error checking item existence" });
+      }
 
-    // Nếu item đã tồn tại, tăng quantity
-    if (result.length > 0) {
-      const updateQuantityQuery =
-        "UPDATE items SET quantity = quantity + ? WHERE collection_id = ? AND product_id = ?";
-      db.query(
-        updateQuantityQuery,
-        [quantity, collection_id, product_id],
-        (err) => {
-          if (err) {
-            console.error("Error updating item quantity:", err);
-            return res
-              .status(500)
-              .json({ message: "Error updating item quantity", isOk: false });
+      // Nếu item đã tồn tại, tăng quantity
+      if (result.length > 0) {
+        const updateQuantityQuery =
+          "UPDATE items SET quantity = quantity + ? WHERE collection_id = ? AND product_id = ?";
+        db.query(
+          updateQuantityQuery,
+          [quantity, collection_id, product_id],
+          (err) => {
+            if (err) {
+              console.error("Error updating item quantity:", err);
+              return res
+                .status(500)
+                .json({ isOk: false, message: "Error updating item quantity" });
+            }
           }
-          return res.status(200).json({
-            message: "Item quantity updated successfully",
+        );
+      } else {
+        // Nếu item chưa có, thêm item mới vào bảng `items`
+        const insertItemQuery =
+          "INSERT INTO items (collection_id, product_id, quantity) VALUES (?, ?, ?)";
+        db.query(
+          insertItemQuery,
+          [collection_id, product_id, quantity],
+          (err) => {
+            if (err) {
+              console.error("Error inserting item:", err);
+              return res
+                .status(500)
+                .json({ isOk: false, message: "Error inserting item" });
+            }
+          }
+        );
+      }
+    });
+  });
 
-            isOk: true,
-          });
-        }
-      );
-    } else {
-      // Nếu item chưa có, thêm item mới vào bảng `items`
-      const insertItemQuery =
-        "INSERT INTO items (collection_id, product_id, quantity) VALUES (?, ?, ?)";
-      db.query(
-        insertItemQuery,
-        [collection_id, product_id, quantity],
-        (err) => {
-          if (err) {
-            console.error("Error inserting item:", err);
-            return res
-              .status(500)
-              .json({ message: "Error inserting item", isOk: false });
-          }
-          return res
-            .status(200)
-            .json({
-              message: "Item added to collection successfully",
-              isOk: true,
-            });
-        }
-      );
-    }
+  return res.status(200).json({
+    message: "Items added/updated in all collections successfully",
+    isOk: true,
   });
 };
 
@@ -266,5 +261,5 @@ module.exports = {
   addCollection,
   getCollectionsByUserId,
   getUserCollectionsWithItems,
-  addItemToCollection,
+  addItemToMultipleCollections,
 };
