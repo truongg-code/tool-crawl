@@ -11,6 +11,7 @@ const context = require("./config/createContext");
 const { getNgrokUrl } = require("./utils/generalFunctions");
 const bodyParser = require("body-parser");
 const authRoutes = require("./routes/authRoutes");
+const collectionApiRoutes = require("./routes/collectionRoutes");
 
 puppeteer.use(StealthPlugin());
 
@@ -36,7 +37,7 @@ const initializeContext = async () => {
 
 initializeContext().then(() => {
   initApiRoutes(app);
-
+  collectionApiRoutes(app);
   app.use("/api/auth", authRoutes);
 
   app.listen(PORT, () => {
