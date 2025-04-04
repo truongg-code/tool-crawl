@@ -1,5 +1,6 @@
 const db = require("../../models/db");
 
+// Kiểm tra xem bộ sưu tập đã tồn tại chưa
 const checkCollectionExists = (user_id, name, callback) => {
   const query =
     "SELECT COUNT(*) AS count FROM collections WHERE user_id = ? AND name = ?";
@@ -12,6 +13,7 @@ const checkCollectionExists = (user_id, name, callback) => {
   });
 };
 
+// Thêm bộ sưu tập mới
 const addCollection = (req, res) => {
   const { user_id, name, id } = req.body;
 
@@ -53,6 +55,7 @@ const addCollection = (req, res) => {
   });
 };
 
+// Lấy tất cả bộ sưu tập của người dùng theo user_id
 const getCollectionsByUserId = (req, res) => {
   const user_id = req.query.user_id;
 
@@ -81,6 +84,7 @@ const getCollectionsByUserId = (req, res) => {
   });
 };
 
+// Lấy tất cả bộ sưu tập của người dùng theo user_id + join item + product
 const getUserCollectionsWithItems = (req, res) => {
   const user_id = req.query.user_id;
 
@@ -125,7 +129,7 @@ const getUserCollectionsWithItems = (req, res) => {
 
       if (row.item_id) {
         collectionsMap[collectionId].items.push({
-          id: row.item_id,
+          item_id: row.item_id,
           quantity: row.quantity,
           product: {
             id: row.product_id,
@@ -257,9 +261,97 @@ const addItemToMultipleCollectionsHelper = (
   });
 };
 
+// delete collections
+const deleteCollections = (req, res) => {
+  const { collection_ids } = req.body;
+  if (!Array.isArray(collection_ids) || collection_ids.length === 0) {
+    return res.status(400).json({
+      message: "Invalid collection_ids provided",
+      isOk: false,
+    });
+  }
+
+  const placeholders = collection_ids.map(() => "?").join(", ");
+  const query = `DELETE FROM collections WHERE id IN (${placeholders})`;
+  db.query(query, collection_ids, (err, result) => {
+    if (err) {
+      console.error("Error deleting collections:", err);
+      return res
+        .status(500)
+        .json({ message: "Error deleting collections", isOk: false });
+    }
+
+    return res.status(200).json({
+      message: "Collections deleted successfully",
+      affectedRows: result.affectedRows,
+      isOk: true,
+    });
+  });
+};
+
+// delete items and collections checked
+const deleteSelectedItemsAndCollections = (req, res) => {
+  const { collectionIds = [], itemIds = [] } = req.body;
+
+  if (!Array.isArray(collectionIds) || !Array.isArray(itemIds)) {
+    return res.status(400).json({
+      message: "Invalid data format. Must be arrays.",
+      isOk: false,
+    });
+  }
+
+  // Nếu không có gì để xóa
+  if (collectionIds.length === 0 && itemIds.length === 0) {
+    return res.status(400).json({
+      message: "No collection or item IDs provided.",
+      isOk: false,
+    });
+  }
+
+  // Xóa collections
+  if (collectionIds.length > 0) {
+    const placeholders = collectionIds.map(() => "?").join(", ");
+    const query = `DELETE FROM collections WHERE id IN (${placeholders})`;
+
+    db.query(query, collectionIds, (err) => {
+      if (err) {
+        console.error("Error deleting collections:", err);
+        return res.status(500).json({
+          message: "Error deleting collections",
+          isOk: false,
+        });
+      }
+    });
+  }
+
+  // Xóa items
+  if (itemIds.length > 0) {
+    const placeholders = itemIds.map(() => "?").join(", ");
+    const query = `DELETE FROM items WHERE id IN (${placeholders})`;
+
+    db.query(query, itemIds, (err) => {
+      if (err) {
+        console.error("Error deleting items:", err);
+        return res.status(500).json({
+          message: "Error deleting items",
+          isOk: false,
+        });
+      }
+    });
+  }
+
+  // Trả về kết quả chung sau khi xử lý
+  return res.status(200).json({
+    message: "Selected collections and items deleted successfully",
+    isOk: true,
+  });
+};
+
 module.exports = {
   addCollection,
   getCollectionsByUserId,
   getUserCollectionsWithItems,
   addItemToMultipleCollections,
+  deleteCollections,
+  deleteSelectedItemsAndCollections,
 };

@@ -5,6 +5,8 @@ const {
   getCollectionsByUserId,
   getUserCollectionsWithItems,
   addItemToMultipleCollections,
+  deleteCollections,
+  deleteSelectedItemsAndCollections,
 } = require("../controller/Collections/CollectionController");
 
 const router = express.Router();
@@ -14,6 +16,8 @@ const collectionApiRoutes = (app) => {
   router.post("/add-item-to-collections", addItemToMultipleCollections);
   router.get("/get-collections", getCollectionsByUserId);
   router.get("/get-collections-with-items", getUserCollectionsWithItems);
+  router.delete("/delete-collections", deleteCollections);
+  router.delete("/delete-selected", deleteSelectedItemsAndCollections);
 
   return app.use("/api/collections", router);
 };
