@@ -96,15 +96,15 @@ const getUserCollectionsWithItems = (req, res) => {
 
   // Lấy tất cả collection của user + join item + product
   const query = `
-    SELECT
-      c.id AS collection_id, c.name AS collection_name,
-      i.id AS item_id, i.quantity,
-      p.id AS product_id, p.name AS product_name, p.description, p.price, p.point, p.url
-    FROM collections c
-    LEFT JOIN items i ON i.collection_id = c.id
-    LEFT JOIN products p ON i.product_id = p.id
-    WHERE c.user_id = ?
-    ORDER BY c.id;
+    SELECT DISTINCT
+    c.id AS collection_id, c.name AS collection_name,
+    i.id AS item_id, i.quantity, i.shop_id AS shop_id,
+    p.id AS product_id, p.name AS product_name, p.description, p.price, p.point, p.url
+  FROM collections c
+  LEFT JOIN items i ON i.collection_id = c.id
+  LEFT JOIN products p ON i.product_id = p.id
+  WHERE c.user_id = ?
+  ORDER BY c.id;
   `;
 
   db.query(query, [user_id], (err, results) => {
@@ -138,6 +138,7 @@ const getUserCollectionsWithItems = (req, res) => {
             price: row.price,
             point: row.point,
             url: row.url,
+            shop_id: row.shop_id,
           },
         });
       }
@@ -156,12 +157,12 @@ const getUserCollectionsWithItems = (req, res) => {
 // Hàm thêm item vào nhiều collectionss
 const addItemToMultipleCollections = async (req, res) => {
   const { product, collections, quantity } = req.body; // Lấy product, collections và quantity từ request body
-  const { id, name, description, price, point, url } = product;
+  const { id, name, description, price, point, url, shopId } = product;
 
   try {
     // Kiểm tra xem sản phẩm đã tồn tại trong bảng `products` chưa
-    const productQuery = "SELECT id FROM products WHERE id = ?";
-    db.query(productQuery, [id], (err, result) => {
+    const productQuery = "SELECT id FROM products WHERE id = ? AND shop_id = ?";
+    db.query(productQuery, [id, shopId], (err, result) => {
       if (err) {
         console.error("Error checking product existence:", err);
         return res
@@ -172,10 +173,10 @@ const addItemToMultipleCollections = async (req, res) => {
       // Nếu sản phẩm chưa có, thêm sản phẩm vào bảng `products`
       if (result.length === 0) {
         const insertProductQuery =
-          "INSERT INTO products (id, name, description, price, point, url) VALUES (?, ?, ?, ?, ?, ?)";
+          "INSERT INTO products (id, name, description, price, point, url, shop_id) VALUES (?, ?, ?, ?, ?, ?, ?)";
         db.query(
           insertProductQuery,
-          [id, name, description, price, point, url],
+          [id, name, description, price, point, url, shopId],
           (err) => {
             if (err) {
               console.error("Error inserting product:", err);
@@ -184,12 +185,24 @@ const addItemToMultipleCollections = async (req, res) => {
                 .json({ isOk: false, message: "Error inserting product" });
             }
             // Sau khi thêm sản phẩm, tiếp tục thêm item vào mỗi collection
-            addItemToMultipleCollectionsHelper(collections, id, quantity, res);
+            addItemToMultipleCollectionsHelper(
+              collections,
+              id,
+              quantity,
+              shopId,
+              res
+            );
           }
         );
       } else {
         // Nếu sản phẩm đã tồn tại, tiếp tục thêm item vào các collection
-        addItemToMultipleCollectionsHelper(collections, id, quantity, res);
+        addItemToMultipleCollectionsHelper(
+          collections,
+          id,
+          quantity,
+          shopId,
+          res
+        );
       }
     });
   } catch (error) {
@@ -205,54 +218,60 @@ const addItemToMultipleCollectionsHelper = (
   collections,
   product_id,
   quantity,
+  shop_id,
   res
 ) => {
   collections.forEach((collection_id) => {
     // Kiểm tra xem item đã có trong collection chưa
     const checkItemQuery =
-      "SELECT * FROM items WHERE collection_id = ? AND product_id = ?";
-    db.query(checkItemQuery, [collection_id, product_id], (err, result) => {
-      if (err) {
-        console.error("Error checking item existence:", err);
-        return res
-          .status(500)
-          .json({ isOk: false, message: "Error checking item existence" });
-      }
+      "SELECT * FROM items WHERE collection_id = ? AND product_id = ? AND shop_id = ?";
+    db.query(
+      checkItemQuery,
+      [collection_id, product_id, shop_id],
+      (err, result) => {
+        if (err) {
+          console.error("Error checking item existence:", err);
+          return res
+            .status(500)
+            .json({ isOk: false, message: "Error checking item existence" });
+        }
 
-      // Nếu item đã tồn tại, tăng quantity
-      if (result.length > 0) {
-        const updateQuantityQuery =
-          "UPDATE items SET quantity = quantity + ? WHERE collection_id = ? AND product_id = ?";
-        db.query(
-          updateQuantityQuery,
-          [quantity, collection_id, product_id],
-          (err) => {
-            if (err) {
-              console.error("Error updating item quantity:", err);
-              return res
-                .status(500)
-                .json({ isOk: false, message: "Error updating item quantity" });
+        // Nếu item đã tồn tại, tăng quantity
+        if (result.length > 0) {
+          const updateQuantityQuery =
+            "UPDATE items SET quantity = quantity + ? WHERE collection_id = ? AND product_id = ? AND shop_id = ?";
+          db.query(
+            updateQuantityQuery,
+            [quantity, collection_id, product_id, shop_id],
+            (err) => {
+              if (err) {
+                console.error("Error updating item quantity:", err);
+                return res.status(500).json({
+                  isOk: false,
+                  message: "Error updating item quantity",
+                });
+              }
             }
-          }
-        );
-      } else {
-        // Nếu item chưa có, thêm item mới vào bảng `items`
-        const insertItemQuery =
-          "INSERT INTO items (collection_id, product_id, quantity) VALUES (?, ?, ?)";
-        db.query(
-          insertItemQuery,
-          [collection_id, product_id, quantity],
-          (err) => {
-            if (err) {
-              console.error("Error inserting item:", err);
-              return res
-                .status(500)
-                .json({ isOk: false, message: "Error inserting item" });
+          );
+        } else {
+          // Nếu item chưa có, thêm item mới vào bảng `items`
+          const insertItemQuery =
+            "INSERT INTO items (collection_id, product_id, quantity, shop_id) VALUES (?, ?, ?, ?)";
+          db.query(
+            insertItemQuery,
+            [collection_id, product_id, quantity, shop_id],
+            (err) => {
+              if (err) {
+                console.error("Error inserting item:", err);
+                return res
+                  .status(500)
+                  .json({ isOk: false, message: "Error inserting item" });
+              }
             }
-          }
-        );
+          );
+        }
       }
-    });
+    );
   });
 
   return res.status(200).json({
@@ -347,6 +366,69 @@ const deleteSelectedItemsAndCollections = (req, res) => {
   });
 };
 
+// budget
+const getCollectionsByUserIdWithBudget = (req, res) => {
+  const { user_id, budget } = req.query;
+  if (!user_id || !budget) {
+    return res.status(400).json({ message: "Missing parameters", isOk: false });
+  }
+
+  const query = `
+    SELECT DISTINCT
+      c.id AS collection_id, c.name AS collection_name,
+      i.id AS item_id, i.quantity, i.shop_id AS shop_id,
+      p.id AS product_id, p.name AS product_name, p.description, p.price, p.point, p.url
+    FROM collections c
+    LEFT JOIN items i ON i.collection_id = c.id
+    LEFT JOIN products p ON i.product_id = p.id
+    WHERE c.user_id = ?
+      AND (p.price * i.quantity <= ?) 
+    ORDER BY c.id;
+  `;
+
+  db.query(query, [user_id, budget], (err, results) => {
+    if (err) {
+      console.error("Error filtering collections by budget:", err);
+      return res.status(500).json({ message: "Server error", isOk: false });
+    }
+
+    const collectionsMap = {};
+    results.forEach((row) => {
+      const collectionId = row.collection_id;
+      if (!collectionsMap[collectionId]) {
+        collectionsMap[collectionId] = {
+          id: collectionId,
+          name: row.collection_name,
+          items: [],
+        };
+      }
+
+      if (row.item_id) {
+        collectionsMap[collectionId].items.push({
+          item_id: row.item_id,
+          quantity: row.quantity,
+          product: {
+            id: row.product_id,
+            name: row.product_name,
+            description: row.description,
+            price: row.price,
+            point: row.point,
+            url: row.url,
+            shop_id: row.shop_id,
+          },
+        });
+      }
+    });
+
+    const collections = Object.values(collectionsMap);
+    res.status(200).json({
+      data: collections,
+      message: "Collections filtered by budget",
+      isOk: true,
+    });
+  });
+};
+
 module.exports = {
   addCollection,
   getCollectionsByUserId,
@@ -354,4 +436,5 @@ module.exports = {
   addItemToMultipleCollections,
   deleteCollections,
   deleteSelectedItemsAndCollections,
+  getCollectionsByUserIdWithBudget,
 };
