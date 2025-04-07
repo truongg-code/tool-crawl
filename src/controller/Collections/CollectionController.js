@@ -366,69 +366,6 @@ const deleteSelectedItemsAndCollections = (req, res) => {
   });
 };
 
-// budget
-const getCollectionsByUserIdWithBudget = (req, res) => {
-  const { user_id, budget } = req.query;
-  if (!user_id || !budget) {
-    return res.status(400).json({ message: "Missing parameters", isOk: false });
-  }
-
-  const query = `
-    SELECT DISTINCT
-      c.id AS collection_id, c.name AS collection_name,
-      i.id AS item_id, i.quantity, i.shop_id AS shop_id,
-      p.id AS product_id, p.name AS product_name, p.description, p.price, p.point, p.url
-    FROM collections c
-    LEFT JOIN items i ON i.collection_id = c.id
-    LEFT JOIN products p ON i.product_id = p.id
-    WHERE c.user_id = ?
-      AND (p.price * i.quantity <= ?) 
-    ORDER BY c.id;
-  `;
-
-  db.query(query, [user_id, budget], (err, results) => {
-    if (err) {
-      console.error("Error filtering collections by budget:", err);
-      return res.status(500).json({ message: "Server error", isOk: false });
-    }
-
-    const collectionsMap = {};
-    results.forEach((row) => {
-      const collectionId = row.collection_id;
-      if (!collectionsMap[collectionId]) {
-        collectionsMap[collectionId] = {
-          id: collectionId,
-          name: row.collection_name,
-          items: [],
-        };
-      }
-
-      if (row.item_id) {
-        collectionsMap[collectionId].items.push({
-          item_id: row.item_id,
-          quantity: row.quantity,
-          product: {
-            id: row.product_id,
-            name: row.product_name,
-            description: row.description,
-            price: row.price,
-            point: row.point,
-            url: row.url,
-            shop_id: row.shop_id,
-          },
-        });
-      }
-    });
-
-    const collections = Object.values(collectionsMap);
-    res.status(200).json({
-      data: collections,
-      message: "Collections filtered by budget",
-      isOk: true,
-    });
-  });
-};
-
 module.exports = {
   addCollection,
   getCollectionsByUserId,
@@ -436,5 +373,4 @@ module.exports = {
   addItemToMultipleCollections,
   deleteCollections,
   deleteSelectedItemsAndCollections,
-  getCollectionsByUserIdWithBudget,
 };
