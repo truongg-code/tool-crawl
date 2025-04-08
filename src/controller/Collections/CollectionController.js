@@ -99,7 +99,7 @@ const getUserCollectionsWithItems = (req, res) => {
     SELECT DISTINCT
     c.id AS collection_id, c.name AS collection_name,
     i.id AS item_id, i.quantity, i.shop_id AS shop_id,
-    p.id AS product_id, p.name AS product_name, p.description, p.price, p.point, p.url
+    p.id AS product_id, p.name AS product_name, p.description, p.price, p.point, p.url, p.image
   FROM collections c
   LEFT JOIN items i ON i.collection_id = c.id
   LEFT JOIN products p ON i.product_id = p.id
@@ -139,6 +139,7 @@ const getUserCollectionsWithItems = (req, res) => {
             point: row.point,
             url: row.url,
             shop_id: row.shop_id,
+            image: row.image,
           },
         });
       }
@@ -157,12 +158,12 @@ const getUserCollectionsWithItems = (req, res) => {
 // Hàm thêm item vào nhiều collectionss
 const addItemToMultipleCollections = async (req, res) => {
   const { product, collections, quantity } = req.body; // Lấy product, collections và quantity từ request body
-  const { id, name, description, price, point, url, shopId } = product;
+  const { id, name, description, price, point, url, image, shop_id } = product;
 
   try {
     // Kiểm tra xem sản phẩm đã tồn tại trong bảng `products` chưa
     const productQuery = "SELECT id FROM products WHERE id = ? AND shop_id = ?";
-    db.query(productQuery, [id, shopId], (err, result) => {
+    db.query(productQuery, [id, shop_id], (err, result) => {
       if (err) {
         console.error("Error checking product existence:", err);
         return res
@@ -173,10 +174,10 @@ const addItemToMultipleCollections = async (req, res) => {
       // Nếu sản phẩm chưa có, thêm sản phẩm vào bảng `products`
       if (result.length === 0) {
         const insertProductQuery =
-          "INSERT INTO products (id, name, description, price, point, url, shop_id) VALUES (?, ?, ?, ?, ?, ?, ?)";
+          "INSERT INTO products (id, name, description, price, point, url, image, shop_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         db.query(
           insertProductQuery,
-          [id, name, description, price, point, url, shopId],
+          [id, name, description, price, point, url, image, shop_id],
           (err) => {
             if (err) {
               console.error("Error inserting product:", err);
@@ -189,7 +190,7 @@ const addItemToMultipleCollections = async (req, res) => {
               collections,
               id,
               quantity,
-              shopId,
+              shop_id,
               res
             );
           }
@@ -200,7 +201,7 @@ const addItemToMultipleCollections = async (req, res) => {
           collections,
           id,
           quantity,
-          shopId,
+          shop_id,
           res
         );
       }
@@ -257,6 +258,13 @@ const addItemToMultipleCollectionsHelper = (
           // Nếu item chưa có, thêm item mới vào bảng `items`
           const insertItemQuery =
             "INSERT INTO items (collection_id, product_id, quantity, shop_id) VALUES (?, ?, ?, ?)";
+          console.log(
+            "collection_id, product_id, quantity, shop_id: ",
+            collection_id,
+            product_id,
+            quantity,
+            shop_id
+          );
           db.query(
             insertItemQuery,
             [collection_id, product_id, quantity, shop_id],
