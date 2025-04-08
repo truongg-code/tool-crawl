@@ -1,4 +1,5 @@
 const db = require("../../models/db");
+const nodemailer = require("nodemailer");
 
 // Kiểm tra xem bộ sưu tập đã tồn tại chưa
 const checkCollectionExists = (user_id, name, callback) => {
@@ -374,6 +375,103 @@ const deleteSelectedItemsAndCollections = (req, res) => {
   });
 };
 
+// Gửi email xác nhận
+const sendConfirmationEmail = async (req, res) => {
+  const { user_id, items, email_received } = req.body;
+  if (!user_id || !Array.isArray(items)) {
+    return res.status(400).json({ isOk: false, message: "Invalid input" });
+  }
+
+  try {
+    const placeholders = items.map(() => "?").join(", ");
+    const itemIds = items.map((i) => i.item_id);
+
+    const query = `
+      SELECT 
+        i.id AS item_id, i.quantity AS old_quantity,
+        p.name, p.url, p.price, p.image
+      FROM items i
+      JOIN products p ON i.product_id = p.id
+      WHERE i.id IN (${placeholders}) AND i.collection_id IN (
+        SELECT id FROM collections WHERE user_id = ?
+      )
+    `;
+
+    db.query(query, [...itemIds, user_id], async (err, result) => {
+      if (err) {
+        console.error("Query error:", err);
+        return res.status(500).json({ isOk: false, message: "DB error" });
+      }
+
+      const itemsMap = {};
+      items.forEach((item) => (itemsMap[item.item_id] = item.quantity));
+
+      let total = 0;
+      let rows = result
+        .map((item, index) => {
+          const quantity = itemsMap[item.item_id] || item.old_quantity;
+          const itemTotal = item.price * quantity;
+          total += itemTotal;
+
+          return `
+            <tr>
+              <td>${index + 1}</td>
+              <td><a href="${item.url}">${item.name}</a></td>
+              <td>${quantity}</td>
+              <td>₫${item.price.toLocaleString()}</td>
+              <td>₫${itemTotal.toLocaleString()}</td>
+            </tr>
+          `;
+        })
+        .join("");
+
+      const html = `
+        <h2>Xác nhận đơn hàng từ Wishlist</h2>
+        <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse;">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Tên sản phẩm</th>
+              <th>Số lượng</th>
+              <th>Giá</th>
+              <th>Thành tiền</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${rows}
+            <tr>
+              <td colspan="4" style="text-align:right;"><strong>Tổng cộng</strong></td>
+              <td><strong>₫${total.toLocaleString()}</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      `;
+
+      // Gửi email (cấu hình ví dụ Gmail)
+      const transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+          user: process.env.GMAIL_USER,
+          pass: process.env.GMAIL_PASS,
+        },
+      });
+
+      const mailOptions = {
+        from: process.env.GMAIL_USER,
+        to: email_received, // có thể lấy từ DB nếu muốn
+        subject: "Xác nhận đơn hàng từ Wishlist",
+        html,
+      };
+
+      await transporter.sendMail(mailOptions);
+      return res.status(200).json({ isOk: true, message: "Email sent!" });
+    });
+  } catch (error) {
+    console.error("Send email error: ", error);
+    return res.status(500).json({ isOk: false, message: "Internal error" });
+  }
+};
+
 module.exports = {
   addCollection,
   getCollectionsByUserId,
@@ -381,4 +479,5 @@ module.exports = {
   addItemToMultipleCollections,
   deleteCollections,
   deleteSelectedItemsAndCollections,
+  sendConfirmationEmail,
 };

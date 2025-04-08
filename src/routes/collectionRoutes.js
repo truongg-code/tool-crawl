@@ -7,6 +7,7 @@ const {
   addItemToMultipleCollections,
   deleteCollections,
   deleteSelectedItemsAndCollections,
+  sendConfirmationEmail,
 } = require("../controller/Collections/CollectionController");
 const {
   getCollectionsByUserIdWithBudget,
@@ -32,6 +33,8 @@ const collectionApiRoutes = (app) => {
     "/get-user-collections-with-optional-budget-and-filter",
     getUserCollectionsWithOptionalBudgetAndFilter
   );
+
+  router.post("/send-confirmation-email", sendConfirmationEmail);
 
   return app.use("/api/collections", router);
 };
