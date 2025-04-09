@@ -416,7 +416,7 @@ const sendConfirmationEmail = async (req, res) => {
           return `
             <tr>
               <td>${index + 1}</td>
-              <td><a href="${item.url}">${item.name}</a></td>
+              <td><a href="${item.url}" target="_blank">${item.name}</a></td>
               <td>${quantity}</td>
               <td>₫${item.price.toLocaleString()}</td>
               <td>₫${itemTotal.toLocaleString()}</td>
@@ -424,6 +424,12 @@ const sendConfirmationEmail = async (req, res) => {
           `;
         })
         .join("");
+
+      // Tạo link mở tất cả sản phẩm
+      const encodedUrls = result
+        .map((item) => encodeURIComponent(item.url))
+        .join(",");
+      const openAllUrl = `https://truongg-code.github.io/open-links/open-multiple.html?urls=${encodedUrls}`;
 
       const html = `
         <h2>Xác nhận đơn hàng từ Wishlist</h2>
@@ -445,9 +451,21 @@ const sendConfirmationEmail = async (req, res) => {
             </tr>
           </tbody>
         </table>
+
+        <div style="margin-top: 20px; text-align: center;">
+          <a href="${openAllUrl}" target="_blank" style="
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+          ">
+            Mở tất cả sản phẩm
+          </a>
+        </div>
       `;
 
-      // Gửi email (cấu hình ví dụ Gmail)
       const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
@@ -458,7 +476,7 @@ const sendConfirmationEmail = async (req, res) => {
 
       const mailOptions = {
         from: process.env.GMAIL_USER,
-        to: email_received, // có thể lấy từ DB nếu muốn
+        to: email_received,
         subject: "Xác nhận đơn hàng từ Wishlist",
         html,
       };
