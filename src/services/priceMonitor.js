@@ -3,7 +3,7 @@ const nodemailer = require("nodemailer");
 const axios = require("axios");
 
 const getNewPriceFromMarketplace = async (productUrl) => {
-  return Math.floor(Math.random() * 1000000 + 10000); // Test giả lập
+  // return Math.floor(Math.random() * 1000000 + 10000); // Test giả lập
   try {
     const res = await axios.get(productUrl, {
       headers: {
@@ -11,6 +11,7 @@ const getNewPriceFromMarketplace = async (productUrl) => {
           "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",
       },
     });
+    console.log("res.data: ", res.data?.price);
     return res.data.price;
   } catch (error) {
     console.error("Lỗi lấy giá sản phẩm:", error);
@@ -43,76 +44,50 @@ const sendEmailNotify = async (email, productName, oldPrice, newPrice, url) => {
   await transporter.sendMail(mailOptions);
 };
 
-const BATCH_SIZE = 10;
-
 const checkPrices = async () => {
-  let offset = 0;
+  const productQuery = "SELECT id, name, price, url FROM products";
+  db.query(productQuery, async (err, products) => {
+    if (err) return console.error("DB error:", err);
+    for (const product of products) {
+      try {
+        const newPrice = await getNewPriceFromMarketplace(product.url);
+        if (newPrice < product.price) {
+          console.log(
+            `🟡 Giá giảm: ${
+              product.name
+            } từ ₫${product.price.toLocaleString()} → ₫${newPrice.toLocaleString()}`
+          );
+          db.query("UPDATE products SET price = ? WHERE id = ?", [
+            newPrice,
+            product.id,
+          ]);
 
-  const runBatch = () => {
-    return new Promise((resolve, reject) => {
-      const query =
-        "SELECT id, name, price, url FROM products LIMIT ? OFFSET ?";
-      db.query(query, [BATCH_SIZE, offset], async (err, products) => {
-        if (err) {
-          console.error("Lỗi truy vấn DB:", err);
-          return reject(err);
-        }
+          const userQuery = `
+            SELECT DISTINCT u.email
+            FROM users u
+            JOIN collections c ON c.user_id = u.id
+            JOIN items i ON i.collection_id = c.id
+            WHERE i.product_id = ?
+          `;
 
-        if (!products || products.length === 0) {
-          console.log("Đã xử lý xong tất cả sản phẩm.");
-          return resolve(false); // kết thúc
-        }
-
-        for (const product of products) {
-          try {
-            const newPrice = await getNewPriceFromMarketplace(product.url);
-            if (newPrice && newPrice < product.price) {
-              console.log(
-                `🟡 Giá giảm: ${
-                  product.name
-                } từ ₫${product.price.toLocaleString()} → ₫${newPrice.toLocaleString()}`
-              );
-              db.query("UPDATE products SET price = ? WHERE id = ?", [
+          db.query(userQuery, [product.id], async (err, users) => {
+            if (err) return console.error("Lỗi lấy danh sách user:", err);
+            for (const user of users) {
+              await sendEmailNotify(
+                user.email,
+                product.name,
+                product.price,
                 newPrice,
-                product.id,
-              ]);
-
-              const userQuery = `
-                SELECT DISTINCT u.email
-                FROM users u
-                JOIN collections c ON c.user_id = u.id
-                JOIN items i ON i.collection_id = c.id
-                WHERE i.product_id = ?
-              `;
-              db.query(userQuery, [product.id], async (err, users) => {
-                if (err) return console.error("Lỗi lấy user:", err);
-                for (const user of users) {
-                  await sendEmailNotify(
-                    user.email,
-                    product.name,
-                    product.price,
-                    newPrice,
-                    product.url
-                  );
-                }
-              });
+                product.url
+              );
             }
-          } catch (error) {
-            console.error("Lỗi xử lý sản phẩm:", product.name, error);
-          }
+          });
         }
-
-        offset += BATCH_SIZE;
-        resolve(true); // còn batch
-      });
-    });
-  };
-
-  // Lặp batch cho đến khi hết
-  let hasNext = true;
-  while (hasNext) {
-    hasNext = await runBatch();
-  }
+      } catch (error) {
+        console.error("Lỗi xử lý sản phẩm:", product.name, error);
+      }
+    }
+  });
 };
 
 module.exports = { checkPrices, getNewPriceFromMarketplace };

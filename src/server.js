@@ -46,13 +46,17 @@ initializeContext().then(() => {
   collectionApiRoutes(app);
   app.use("/api/auth", authRoutes);
 
+  getNewPriceFromMarketplace(
+    "https://tiki.vn/api/v2/products/7982628?platform=web&spid=7982629&version=3"
+  );
+
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
   });
 });
 
-// cron.schedule("0 0 */12 * * *", () => {
-cron.schedule("* * * * *", () => {
+cron.schedule("0 0 */12 * * *", () => {
+  // cron.schedule("* * * * *", () => {
   console.log("⏱ Kiểm tra giá sản phẩm...");
   checkPrices();
 });
