@@ -13,6 +13,12 @@ const bodyParser = require("body-parser");
 const authRoutes = require("./routes/authRoutes");
 const collectionApiRoutes = require("./routes/collectionRoutes");
 
+const cron = require("node-cron");
+const {
+  checkPrices,
+  getNewPriceFromMarketplace,
+} = require("./services/priceMonitor");
+
 puppeteer.use(StealthPlugin());
 
 const app = express();
@@ -43,4 +49,10 @@ initializeContext().then(() => {
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
   });
+});
+
+// cron.schedule("0 0 */12 * * *", () => {
+cron.schedule("* * * * *", () => {
+  console.log("⏱ Kiểm tra giá sản phẩm...");
+  checkPrices();
 });
