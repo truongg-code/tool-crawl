@@ -1,16 +1,14 @@
 require("dotenv").config();
 const express = require("express");
 const puppeteer = require("puppeteer-extra");
-const fs = require("fs");
-const path = require("path");
+
 const initApiRoutes = require("./routes/api");
 const cors = require("cors");
 const StealthPlugin = require("puppeteer-extra-plugin-stealth");
-const connection = require("./models/db");
+
 const context = require("./config/createContext");
 const { getNgrokUrl } = require("./utils/generalFunctions");
 const bodyParser = require("body-parser");
-const authRoutes = require("./routes/authRoutes");
 const collectionApiRoutes = require("./routes/collectionRoutes");
 
 const cron = require("node-cron");
@@ -18,6 +16,7 @@ const {
   checkPrices,
   getNewPriceFromMarketplace,
 } = require("./services/priceMonitor");
+const syncTikiRoutes = require("./routes/authSyncTikiRoutes");
 
 puppeteer.use(StealthPlugin());
 
@@ -44,7 +43,7 @@ const initializeContext = async () => {
 initializeContext().then(() => {
   initApiRoutes(app);
   collectionApiRoutes(app);
-  app.use("/api/auth", authRoutes);
+  syncTikiRoutes(app);
 
   getNewPriceFromMarketplace(
     "https://tiki.vn/api/v2/products/7982628?platform=web&spid=7982629&version=3"

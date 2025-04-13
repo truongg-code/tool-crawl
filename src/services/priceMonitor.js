@@ -3,20 +3,20 @@ const nodemailer = require("nodemailer");
 const axios = require("axios");
 
 const getNewPriceFromMarketplace = async (productUrl) => {
-  // return Math.floor(Math.random() * 1000000 + 10000); // Test giả lập
-  try {
-    const res = await axios.get(productUrl, {
-      headers: {
-        "User-Agent":
-          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",
-      },
-    });
-    console.log("res.data: ", res.data?.price);
-    return res.data.price;
-  } catch (error) {
-    console.error("Lỗi lấy giá sản phẩm:", error);
-    return null;
-  }
+  return Math.floor(Math.random() * 1000000 + 10000); // Test giả lập
+  // try {
+  //   const res = await axios.get(productUrl, {
+  //     headers: {
+  //       "User-Agent":
+  //         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",
+  //     },
+  //   });
+  //   console.log("res.data: ", res.data?.price);
+  //   return res.data.price;
+  // } catch (error) {
+  //   console.error("Lỗi lấy giá sản phẩm:", error);
+  //   return null;
+  // }
 };
 
 const sendEmailNotify = async (email, productName, oldPrice, newPrice, url) => {
@@ -63,11 +63,11 @@ const checkPrices = async () => {
           ]);
 
           const userQuery = `
-            SELECT DISTINCT u.email
-            FROM users u
-            JOIN collections c ON c.user_id = u.id
-            JOIN items i ON i.collection_id = c.id
-            WHERE i.product_id = ?
+          SELECT DISTINCT u.email
+          FROM users_tiki u
+          JOIN collections c ON c.user_id = u.id
+          JOIN items i ON i.collection_id = c.id
+          WHERE i.product_id = ? AND u.email IS NOT NULL
           `;
 
           db.query(userQuery, [product.id], async (err, users) => {

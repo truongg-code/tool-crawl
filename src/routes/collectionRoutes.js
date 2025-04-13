@@ -10,8 +10,6 @@ const {
   sendConfirmationEmail,
 } = require("../controller/Collections/CollectionController");
 const {
-  getCollectionsByUserIdWithBudget,
-  getCollectionsByIdsWithOptionalBudget,
   getUserCollectionsWithOptionalBudgetAndFilter,
 } = require("../controller/Collections/CollectionBudgetController");
 
@@ -25,10 +23,6 @@ const collectionApiRoutes = (app) => {
   router.delete("/delete-collections", deleteCollections);
   router.delete("/delete-selected", deleteSelectedItemsAndCollections);
 
-  router.get(
-    "/get-collections-with-items-by-budget",
-    getCollectionsByUserIdWithBudget
-  );
   router.post(
     "/get-user-collections-with-optional-budget-and-filter",
     getUserCollectionsWithOptionalBudgetAndFilter
