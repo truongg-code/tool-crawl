@@ -52,6 +52,7 @@ const syncTikiUser = (req, res) => {
   });
 };
 
+// Hàm đồng bộ giỏ hàng từ Tiki
 const syncCartFromTiki = async (req, res) => {
   const { user_id, collections } = req.body;
 
@@ -61,24 +62,19 @@ const syncCartFromTiki = async (req, res) => {
 
   try {
     for (const collection of collections) {
-      // 1. Check and insert collection if not exists
-      const collectionCheckQuery =
-        "SELECT COUNT(*) AS count FROM collections WHERE id = ?";
-      const [collectionExists] = await db.query(collectionCheckQuery, [
-        collection.id,
-      ]);
-
-      if (collectionExists.count === 0) {
-        const insertCollectionQuery =
-          "INSERT INTO collections (id, user_id, name) VALUES (?, ?, ?)";
-        await db.query(insertCollectionQuery, [
-          collection.id,
-          user_id,
-          collection.name,
-        ]);
+      // 1. Check và thêm collection nếu chưa có
+      const resultCollectionExists = await db.query(
+        "SELECT COUNT(*) AS count FROM collections WHERE id = ?",
+        [collection.id]
+      );
+      if (resultCollectionExists[0].count === 0) {
+        await db.query(
+          "INSERT INTO collections (id, user_id, name) VALUES (?, ?, ?)",
+          [collection.id, user_id, collection.name]
+        );
       }
 
-      // 2. Insert or update each item
+      // 2. Insert hoặc update từng item trước
       for (const item of collection.items) {
         const {
           id: product_id,
@@ -89,50 +85,65 @@ const syncCartFromTiki = async (req, res) => {
           url,
           image,
           quantity,
+          shop_id,
         } = item;
 
-        const shop_id = "tiki"; // fixed for Tiki
-
-        // 2.1 Check and insert product if not exists
-        const [productResult] = await db.query(
+        // 2.1 Kiểm tra product
+        const resultProduct = await db.query(
           "SELECT id FROM products WHERE id = ? AND shop_id = ?",
           [product_id, shop_id]
         );
 
-        if (!productResult) {
-          const insertProductQuery =
-            "INSERT INTO products (id, name, description, price, point, url, image, shop_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-          await db.query(insertProductQuery, [
-            product_id,
-            name,
-            description,
-            price,
-            point,
-            url,
-            image,
-            shop_id,
-          ]);
+        if (!resultProduct || resultProduct.length === 0) {
+          await db.query(
+            "INSERT INTO products (id, name, description, price, point, url, image, shop_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+            [product_id, name, description, price, point, url, image, shop_id]
+          );
         }
 
-        // 2.2 Check if item exists in this collection
-        const [itemResult] = await db.query(
+        // 2.2 Kiểm tra item trong collection
+        const resultItem = await db.query(
           "SELECT id FROM items WHERE collection_id = ? AND product_id = ? AND shop_id = ?",
           [collection.id, product_id, shop_id]
         );
 
-        if (itemResult) {
-          // Update quantity to new value
+        if (resultItem && resultItem.length > 0) {
           await db.query(
             "UPDATE items SET quantity = ? WHERE collection_id = ? AND product_id = ? AND shop_id = ?",
             [quantity, collection.id, product_id, shop_id]
           );
         } else {
-          // Insert new item
           await db.query(
             "INSERT INTO items (collection_id, product_id, quantity, shop_id) VALUES (?, ?, ?, ?)",
             [collection.id, product_id, quantity, shop_id]
           );
         }
+      }
+
+      // 3. Xoá item nào không còn trong danh sách mới
+      const existingItems = await db.query(
+        "SELECT product_id FROM items WHERE collection_id = ?",
+        [collection.id]
+      );
+      const existingIds = existingItems.map((row) => row.product_id);
+      const newIds = collection.items.map((item) => item.id);
+      const toDelete = existingIds.filter((id) => !newIds.includes(id));
+      if (toDelete.length > 0) {
+        await db.query(
+          `DELETE FROM items WHERE collection_id = ? AND product_id IN (${toDelete
+            .map(() => "?")
+            .join(",")})`,
+          [collection.id, ...toDelete]
+        );
+      }
+
+      // 4. Nếu không còn item nào thì xóa luôn collection
+      const checkRemaining = await db.query(
+        "SELECT COUNT(*) AS count FROM items WHERE collection_id = ?",
+        [collection.id]
+      );
+      if (checkRemaining[0].count === 0) {
+        await db.query("DELETE FROM collections WHERE id = ?", [collection.id]);
       }
     }
 

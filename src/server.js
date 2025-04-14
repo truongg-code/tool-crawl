@@ -54,8 +54,9 @@ initializeContext().then(() => {
   });
 });
 
+// kiểm tra giá và gửi mail nếu sản phẩm được giảm giá
 cron.schedule("0 0 */12 * * *", () => {
   // cron.schedule("* * * * *", () => {
-  console.log("⏱ Kiểm tra giá sản phẩm...");
+  console.log("Kiểm tra giá sản phẩm...");
   checkPrices();
 });
