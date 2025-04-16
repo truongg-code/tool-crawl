@@ -62,7 +62,6 @@ const syncCartFromTiki = async (req, res) => {
 
   try {
     for (const collection of collections) {
-      // 1. Check và thêm collection nếu chưa có
       const resultCollectionExists = await db.query(
         "SELECT COUNT(*) AS count FROM collections WHERE id = ?",
         [collection.id]
@@ -74,7 +73,7 @@ const syncCartFromTiki = async (req, res) => {
         );
       }
 
-      // 2. Insert hoặc update từng item trước
+      // Thêm hoặc cập nhật items trước
       for (const item of collection.items) {
         const {
           id: product_id,
@@ -88,7 +87,6 @@ const syncCartFromTiki = async (req, res) => {
           shop_id,
         } = item;
 
-        // 2.1 Kiểm tra product
         const resultProduct = await db.query(
           "SELECT id FROM products WHERE id = ? AND shop_id = ?",
           [product_id, shop_id]
@@ -101,7 +99,6 @@ const syncCartFromTiki = async (req, res) => {
           );
         }
 
-        // 2.2 Kiểm tra item trong collection
         const resultItem = await db.query(
           "SELECT id FROM items WHERE collection_id = ? AND product_id = ? AND shop_id = ?",
           [collection.id, product_id, shop_id]
@@ -120,24 +117,35 @@ const syncCartFromTiki = async (req, res) => {
         }
       }
 
-      // 3. Xoá item nào không còn trong danh sách mới
+      // Lấy danh sách items hiện tại từ DB
       const existingItems = await db.query(
-        "SELECT product_id FROM items WHERE collection_id = ?",
+        "SELECT product_id, shop_id FROM items WHERE collection_id = ?",
         [collection.id]
       );
-      const existingIds = existingItems.map((row) => row.product_id);
-      const newIds = collection.items.map((item) => item.id);
-      const toDelete = existingIds.filter((id) => !newIds.includes(id));
-      if (toDelete.length > 0) {
+      const existingMap = new Map(
+        existingItems.map((item) => [
+          `${item.product_id}_${item.shop_id}`,
+          true,
+        ])
+      );
+      const newMap = new Map(
+        collection.items.map((item) => [`${item.id}_${item.shop_id}`, true])
+      );
+
+      const toDeletePairs = [];
+      existingMap.forEach((_, key) => {
+        if (!newMap.has(key)) toDeletePairs.push(key);
+      });
+
+      for (const key of toDeletePairs) {
+        const [product_id, shop_id] = key.split("_");
         await db.query(
-          `DELETE FROM items WHERE collection_id = ? AND product_id IN (${toDelete
-            .map(() => "?")
-            .join(",")})`,
-          [collection.id, ...toDelete]
+          "DELETE FROM items WHERE collection_id = ? AND product_id = ? AND shop_id = ?",
+          [collection.id, product_id, shop_id]
         );
       }
 
-      // 4. Nếu không còn item nào thì xóa luôn collection
+      // Nếu collection không còn item nào thì xoá
       const checkRemaining = await db.query(
         "SELECT COUNT(*) AS count FROM items WHERE collection_id = ?",
         [collection.id]
