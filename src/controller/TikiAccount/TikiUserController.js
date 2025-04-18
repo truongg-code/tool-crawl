@@ -97,6 +97,11 @@ const syncCartFromTiki = async (req, res) => {
             "INSERT INTO products (id, name, description, price, point, url, image, shop_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
             [product_id, name, description, price, point, url, image, shop_id]
           );
+        } else {
+          await db.query(
+            "UPDATE products SET name = ?, description = ?, price = ?, point = ?, url =?, image = ? WHERE id = ? AND shop_id = ?",
+            [name, description, price, point, url, image, product_id, shop_id]
+          );
         }
 
         const resultItem = await db.query(
