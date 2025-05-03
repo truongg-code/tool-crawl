@@ -12,29 +12,32 @@ const syncTikiUser = (req, res) => {
   }
 
   const hasCreatedDate = !!created_date;
+  const receive_email = email ? 1 : 0;
 
   const query = hasCreatedDate
     ? `
-        INSERT INTO users_tiki (id, email, name, phone, created_date)
-        VALUES (?, ?, ?, ?, FROM_UNIXTIME(?))
+        INSERT INTO users_tiki (id, email, name, phone, created_date, receive_email)
+        VALUES (?, ?, ?, ?, FROM_UNIXTIME(?), ?)
         ON DUPLICATE KEY UPDATE
           email = CASE WHEN VALUES(email) IS NOT NULL THEN VALUES(email) ELSE email END,
           name = VALUES(name),
           phone = VALUES(phone),
-          created_date = VALUES(created_date)
+          created_date = VALUES(created_date),
+          receive_email = VALUES(receive_email)
       `
     : `
-        INSERT INTO users_tiki (id, email, name, phone)
-        VALUES (?, ?, ?, ?)
+        INSERT INTO users_tiki (id, email, name, phone, receive_email)
+        VALUES (?, ?, ?, ?, ?)
         ON DUPLICATE KEY UPDATE
           email = CASE WHEN VALUES(email) IS NOT NULL THEN VALUES(email) ELSE email END,
           name = VALUES(name),
-          phone = VALUES(phone)
+          phone = VALUES(phone),
+          receive_email = VALUES(receive_email)
       `;
 
   const values = hasCreatedDate
-    ? [id, email, name, phone_number, created_date]
-    : [id, email, name, phone_number];
+    ? [id, email, name, phone_number, created_date, receive_email]
+    : [id, email, name, phone_number, receive_email];
 
   db.query(query, values, (err) => {
     if (err) {
@@ -45,10 +48,26 @@ const syncTikiUser = (req, res) => {
       });
     }
 
-    return res.status(200).json({
-      isOk: true,
-      message: "Đồng bộ tài khoản Tiki thành công",
-    });
+    // Lấy lại trạng thái receive_email để trả về client
+    db.query(
+      "SELECT receive_email FROM users_tiki WHERE id = ?",
+      [id],
+      (err2, results) => {
+        if (err2) {
+          console.error("Lỗi khi lấy receive_email:", err2);
+          return res.status(500).json({
+            isOk: false,
+            message: "Đồng bộ thành công nhưng lỗi khi lấy receive_email",
+          });
+        }
+
+        return res.status(200).json({
+          isOk: true,
+          message: "Đồng bộ tài khoản Tiki thành công",
+          receive_email: results[0]?.receive_email ?? null,
+        });
+      }
+    );
   });
 };
 
@@ -169,4 +188,25 @@ const syncCartFromTiki = async (req, res) => {
   }
 };
 
-module.exports = { syncTikiUser, syncCartFromTiki };
+const updateReceiveEmail = async (req, res) => {
+  const { id, receive_email } = req.body;
+
+  if (!id)
+    return res
+      .status(400)
+      .json({ isOk: false, message: "Thiếu ID người dùng" });
+
+  try {
+    await db.query("UPDATE users_tiki SET receive_email = ? WHERE id = ?", [
+      receive_email ? 1 : 0,
+      id,
+    ]);
+
+    return res.json({ isOk: true, message: "Cập nhật thành công" });
+  } catch (error) {
+    console.error("Lỗi cập nhật receive_email:", error);
+    return res.status(500).json({ isOk: false, message: "Lỗi server" });
+  }
+};
+
+module.exports = { syncTikiUser, syncCartFromTiki, updateReceiveEmail };

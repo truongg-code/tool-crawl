@@ -67,7 +67,7 @@ const checkPrices = async () => {
           FROM users_tiki u
           JOIN collections c ON c.user_id = u.id
           JOIN items i ON i.collection_id = c.id
-          WHERE i.product_id = ? AND u.email IS NOT NULL
+         WHERE i.product_id = ? AND u.email IS NOT NULL AND u.receive_email = 1
           `;
 
           db.query(userQuery, [product.id], async (err, users) => {
