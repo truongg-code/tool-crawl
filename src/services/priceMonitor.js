@@ -2,21 +2,52 @@ const db = require("../models/db");
 const nodemailer = require("nodemailer");
 const axios = require("axios");
 
+const convertProductUrlToAPIUrl = (url) => {
+  try {
+    const parsedUrl = new URL(url);
+    const pathParts = parsedUrl.pathname.split("-");
+
+    // Tìm phần có 'p' và loại bỏ hậu tố .html
+    const productPart = pathParts.find((part) => part.startsWith("p"));
+    const productId = productPart?.replace("p", "").replace(".html", "");
+
+    const spid = parsedUrl.searchParams.get("spid");
+
+    if (!productId || !spid) {
+      throw new Error("Không tìm thấy productId hoặc spid trong URL.");
+    }
+
+    return `https://tiki.vn/api/v2/products/${productId}?platform=web&spid=${spid}&version=3`;
+  } catch (error) {
+    console.error("Lỗi chuyển đổi URL:", error.message);
+    return null;
+  }
+};
+
+// console.log(
+//   "urlTest: ",
+//   convertProductUrlToAPIUrl(
+//     "https://tiki.vn/product-p2753027.html?spid=7197003"
+//   )
+// );
+
 const getNewPriceFromMarketplace = async (productUrl) => {
-  return Math.floor(Math.random() * 1000000 + 10000); // Test giả lập
-  // try {
-  //   const res = await axios.get(productUrl, {
-  //     headers: {
-  //       "User-Agent":
-  //         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",
-  //     },
-  //   });
-  //   console.log("res.data: ", res.data?.price);
-  //   return res.data.price;
-  // } catch (error) {
-  //   console.error("Lỗi lấy giá sản phẩm:", error);
-  //   return null;
-  // }
+  // return Math.floor(Math.random() * 1000000 + 10000); // Test giả lập
+  const urlAPI = convertProductUrlToAPIUrl(productUrl);
+  try {
+    const res = await axios.get(urlAPI, {
+      headers: {
+        "User-Agent":
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",
+      },
+    });
+    console.log("urlAPI: ", urlAPI);
+    console.log("res.data?.price: ", res.data?.price);
+    return res.data?.price;
+  } catch (error) {
+    console.error("Lỗi lấy giá sản phẩm:", error);
+    return null;
+  }
 };
 
 const sendEmailNotify = async (email, productName, oldPrice, newPrice, url) => {

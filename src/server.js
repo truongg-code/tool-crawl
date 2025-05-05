@@ -45,9 +45,9 @@ initializeContext().then(() => {
   collectionApiRoutes(app);
   syncTikiRoutes(app);
 
-  getNewPriceFromMarketplace(
-    "https://tiki.vn/api/v2/products/7982628?platform=web&spid=7982629&version=3"
-  );
+  // getNewPriceFromMarketplace(
+  //   "https://tiki.vn/api/v2/products/7982628?platform=web&spid=7982629&version=3"
+  // );
 
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
