@@ -13,7 +13,7 @@ const getUserCollectionsWithOptionalBudgetAndFilter = (req, res) => {
       SELECT DISTINCT
         c.id AS collection_id, c.name AS collection_name,
         i.id AS item_id, i.quantity, i.shop_id AS shop_id,
-        p.id AS product_id, p.name AS product_name, p.description, p.price, p.point, p.url, p.image
+        p.id AS product_id, p.name AS product_name, p.description, p.price, p.point, p.url, p.image, p.disabled
       FROM collections c
       LEFT JOIN items i ON i.collection_id = c.id
       LEFT JOIN products p ON i.product_id = p.id
@@ -68,6 +68,7 @@ const getUserCollectionsWithOptionalBudgetAndFilter = (req, res) => {
             image: row.image,
             url: row.url,
             shop_id: row.shop_id,
+            disabled: row.disabled,
           },
         });
       }
